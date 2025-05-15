@@ -2,16 +2,20 @@
 
 export const HeroSection = () => {
   return (
-    <div className="h-[90vh] px-2   w-full flex justify-center items-center">
-        <section className="h-full w-full rounded-2xl bg-text  ">
+    <div className="h-[90vh] px-2 w-full flex justify-center items-center">
+        <section className="h-full w-full rounded-2xl relative ">
             <video 
-                src="/Videos/iphone-scene.mp4"
+                src="/Videos/iphone-scene2.mp4"
                 className="h-full w-full rounded-2xl object-cover"
-                autoPlay="true"
-                loop="false"
-                muted="true"
+                autoPlay
+                muted
             />
+            <h1 className="text-background text-6xl absolute z-10 top-[10vh] left-[2vw] ">
+                
+            </h1>            
         </section>
     </div>
   );
 };
+
+// iphone, airtag, imac,  macbook, ipad, apple watch, airpods, airpods max, cargador, fundas, vidrios templados, hidrogel, 
