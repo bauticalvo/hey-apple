@@ -18,4 +18,3 @@ export const HeroSection = () => {
   );
 };
 
-// iphone, airtag, imac,  macbook, ipad, apple watch, airpods, airpods max, cargador, fundas, vidrios templados, hidrogel, 
