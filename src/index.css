@@ -3,11 +3,17 @@
 
 @theme {
   --color-background: #f5f5f7;
-  --color-text: #1C1C1E;
-  --color-dim-grey: #636366;
+  --color-text: #080808;
+  --color-transition: #121212;
+  --color-text-op: #878787;
+  --color-footer: #999999;
+  --color-span-grey: #b6b6b6;
+  --color-dim-grey: #636363;
   --color-french-grey: #d1d1d6;
   --color-tiffany-blue: #A7DAD8;
-  --color-hey-green: #09403a
+  --color-hey-green: #09403a;
+  --color-ascensor: #F15A24;
+
 
   --font-family: 'sf-pro-display';
                                                 

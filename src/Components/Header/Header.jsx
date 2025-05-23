@@ -1,8 +1,11 @@
 import { motion } from 'framer-motion';
+import { useLocation, useNavigate } from 'react-router';
 
 
 
-export const Header = ({isOpen, setIsOpen}) => {
+export const Header = ({isOpen, setIsOpen, startTransition}) => {
+    const navigate = useNavigate();
+    const location = useLocation();
 
 
     return (
@@ -10,12 +13,16 @@ export const Header = ({isOpen, setIsOpen}) => {
             <img 
                 src="/Logos/hey-apple-logo2.png"
                 className="h-[5vh] w-auto "
+                onClick={() => {
+                    if (location.pathname === "/") return;
+                    startTransition(navigate, "/"); 
+                } }
             />
                 <motion.button
                     whileHover={{ scale: 1.2 }}
                     whileTap={{ scale: 0.9 }}
                     onClick={() => setIsOpen(!isOpen)}
-                    className={`relative text-2xl font-black ${ isOpen ? 'text-beige   ' : 'text-persian '} flex flex-col justify-center items-end space-y-2`}
+                    className={`relative text-2xl font-black ${ isOpen ? 'text-text   ' : 'text-text '} flex flex-col justify-center items-end space-y-2`}
                 >
                     {/* Primera línea */}
                     <motion.div

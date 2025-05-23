@@ -1,73 +1,74 @@
 
 import { motion } from 'framer-motion';
-import { useNavigate } from 'react-router';
-import { FaGithub, FaLinkedin, FaInstagram, FaEnvelope  } from 'react-icons/fa';
+import { useLocation, useNavigate } from 'react-router';
+import MotionButton from '../Custom/MotionButton';
+import { IoIosArrowRoundForward } from "react-icons/io";
+import MotionIcon from '../Custom/MotionIcon';
+import { useState } from 'react';
 
 
-const Menu = ({ isOpen, setIsOpen }) => {
+const Menu = ({ isOpen, setIsOpen, startTransition}) => {
+
+  const Whatsapp_url = "https://wa.me/5492644598868?text=Hola%20hey%20apple!%2C%20quiero%20conocer%20mas%20sobre%20sus%20productos"
+  const Instagram_url = "https://www.instagram.com/elascensormkt/"
+
+
+  const NavigationButton = ({text_1, text_2, path}) => {
 
   const navigate = useNavigate();
+  const location = useLocation();
 
+    return (
+      <motion.div
+        className='text-xl font-bold'
+        onClick={() => {
+          setIsOpen(false);
+          if (location.pathname === path) return;
+          startTransition(navigate, path); 
+        }}
+      >
+        <MotionButton text_1={text_1} text_2={text_2} dark={true} />
+      </motion.div>
+    )
+  }
 
-  const handleMail = ()=>{
-    setIsOpen(false)
+  const SocialButton = ({url,text}) =>{
+
+    const [hovered, setHovered] = useState(false)
+
+    return (
+      <motion.button
+        onClick={() => window.open(url)}
+        onMouseEnter={() => setHovered(true)}
+        onMouseLeave={() => setHovered(false)}
+        className='flex items-center space-x-2 text-text text-2xl'
+      >
+        <span>{text}</span>
+        <MotionIcon icon_1={IoIosArrowRoundForward} icon_2={IoIosArrowRoundForward} dark={true} hovered={hovered} plus={22}/>
+      </motion.button>
+    )
   }
 
     return (
           <motion.div   
-            className={`fixed z-[50] top-0 w-full h-[90vh] rounded-2xl shadow-black bg-background p-4 shadow-2xl flex flex-col justify-center items-center text-text space-y-8
+            className={`fixed z-[50] top-0 w-full h-[90vh] rounded-2xl shadow-black bg-background p-4 shadow-2xl flex flex-col justify-evenly items-center text-text space-y-8
               ${ isOpen ? 'flex' : 'hidden'}`}
               initial={{ opacity: 0, y: "-100%" }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: "-100%" }}
               transition={{ duration: 0.5 }}
           >
-            <motion.section className='my-10 p-2 text-xl font-bold flex flex-col items-center  space-y-8 '>
-           <button
-            onClick={()=> navigate('/')}
-           >Inicio
-           </button>
-           <button
-            onClick={()=> navigate('/profile')}
-           >Perfil
-           </button>
-           <button
-            onClick={()=> navigate('/proyects')}
-           >Proyectos
-           </button>
+            <motion.section className='my-10 p-2 text-xl font-bold flex flex-col items-center space-y-20 '>
+              <NavigationButton text_1={"Inicio"} text_2={"Inicio"} path={"/"}/>
+              <NavigationButton text_1={"Iphone"} text_2={"Iphone"} path={"/iphone"}/>
+              <NavigationButton text_1={"Mac"} text_2={"Mac"} path={"/mac"}/>
+            </motion.section>
 
-            </motion.section>
-            <motion.section className='flex space-x-6'>
-            <motion.a
-                onClick={ ()=> window.open("https://github.com/bauticalvo")}
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-              >
-                <FaGithub className="text-3xl" />
-              </motion.a>
-              <motion.a
-                onClick={ ()=> window.open("https://www.linkedin.com/in/juan-bautista-calvo-668613238/")}
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-              >
-                <FaLinkedin className="text-3xl" />
-              </motion.a>
-         
-              <motion.a
-                onClick={ ()=> window.open("https://www.instagram.com/bauti.calvoo/")}
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-              >
-                <FaInstagram className="text-3xl" />
-              </motion.a>
-              <motion.a
-                onClick={ ()=> handleMail()}
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-              >
-                <FaEnvelope  className="text-3xl" />
-              </motion.a>
-            </motion.section>
+            <section className='flex space-x-8 '>
+              <SocialButton url={Whatsapp_url} text={"Whatsapp"}/>
+              <SocialButton url={Instagram_url} text={"Instagram"}/>
+            </section>
+           
           </motion.div>
     );
 }
