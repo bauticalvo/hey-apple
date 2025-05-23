@@ -3,7 +3,7 @@ import { AppleButton } from "../Custom/AppleButton"
 import { motion } from 'framer-motion';
 import MotionIcon from "../Custom/MotionIcon";
 import { IoIosArrowRoundForward } from "react-icons/io";
-import { useNavigate } from "react-router";
+import { useLocation, useNavigate } from "react-router";
 
 
 
@@ -12,6 +12,7 @@ export const Footer = ({startTransition}) => {
     const Whatsapp_url = "https://wa.me/5492644598868?text=Hola%20hey%20apple!%2C%20quiero%20conocer%20mas%20sobre%20sus%20productos"
     const Instagram_url = "https://www.instagram.com/elascensormkt/"
     const navigate = useNavigate()
+    const location = useLocation()
 
     const navigationArray = [
         {
@@ -44,7 +45,19 @@ export const Footer = ({startTransition}) => {
           </motion.button>
         )
       }
-    
+    const TermsButton = ({url,text}) =>{
+       return (
+        <button
+        onClick={() => {
+          if(location.pathname === url) return
+          startTransition(navigate, `legal${url}`)
+      }}
+          className=" hover:cursor-pointer"
+        >
+          {text}
+        </button>
+      ) 
+    }
 
     return (
         <footer className="flex flex-col h-[90vh]">
@@ -115,18 +128,8 @@ export const Footer = ({startTransition}) => {
                 </div>
 
                 <div className="flex space-x-8  text-md font-semibold">
-                  <button
-                    onClick={() => navigate("/privacy")}
-                    className=" hover:cursor-pointer"
-                  >
-                    Política de privacidad
-                  </button>
-                  <button
-                    onClick={() => navigate("/terms")}
-                    className=" hover:cursor-pointer"
-                  >
-                    Términos  y condiciones
-                  </button>
+                  <TermsButton url={"/privacy"} text={"Política de privacidad"}/>
+                  <TermsButton url={"/terms"} text={"Términos  y condiciones"}/>
                 </div>
 
                 <div className="flex space-x-2  text-md font-semibold">

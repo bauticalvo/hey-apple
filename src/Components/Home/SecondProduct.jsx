@@ -39,16 +39,24 @@ const SoundWave = ({ active }) => {
 export const SecondProduct = () => {
     const audioRef = useRef(null);
     const [waveActive, setWaveActive] = useState(false);
+    const waveTimeout = useRef(null);
 
     const handleMouseEnter = () => {
-        setWaveActive(true);
-        if (audioRef.current) {
-            audioRef.current.currentTime = 0;
-            audioRef.current.play();
-        }
+        if (waveTimeout.current) clearTimeout(waveTimeout.current);
+        waveTimeout.current = setTimeout(() => {
+            setWaveActive(true);
+            if (audioRef.current) {
+                audioRef.current.currentTime = 0;
+                audioRef.current.play();
+            }
+        }, 2000);
     };
 
     const handleMouseLeave = () => {
+        if (waveTimeout.current) {
+            clearTimeout(waveTimeout.current);
+            waveTimeout.current = null;
+        }
         setWaveActive(false);
         if (audioRef.current) {
             audioRef.current.pause();
@@ -57,7 +65,7 @@ export const SecondProduct = () => {
     };
 
     return (
-        <div className="min-h-[100vh] w-full p-2 m-20 bg-background flex">
+        <div className="min-h-[100vh] w-full p-2 m-20 bg-teal-100 flex">
             <motion.section 
                 className="h-full w-2/3 relative overflow-visible"
                 onMouseEnter={handleMouseEnter}
@@ -67,7 +75,7 @@ export const SecondProduct = () => {
                 <audio ref={audioRef} src="/Audio/bad_liar.mp3" />
                 <SoundWave active={waveActive} />
             </motion.section>
-            <section className="flex flex-col space-y-4 w-1/3 h-full">
+            <section className="flex flex-col h-full justify-center space-y-4 w-1/3 bg-teal-200 ">
                 <h2>El mundo suena como vos queres</h2>
                 <h1 className="text-4xl">Airpods</h1>
                 <p>
