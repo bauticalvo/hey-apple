@@ -1,6 +1,7 @@
 import Spline from '@splinetool/react-spline';
 import { motion } from 'framer-motion';
 import { useRef, useState } from 'react';
+import PointButton from '../Custom/PointButton';
 
 // SoundWave component for the wave animation
 const SoundWave = ({ active }) => {
@@ -65,9 +66,9 @@ export const SecondProduct = () => {
     };
 
     return (
-        <div className="min-h-[100vh] w-full p-2 m-20 bg-teal-100 flex">
+        <div className="h-[90vh] w-full p-2 m-20  flex">
             <motion.section 
-                className="h-full w-2/3 relative overflow-visible"
+                className="h-full w-[60%] relative overflow-visible"
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
             >
@@ -75,16 +76,21 @@ export const SecondProduct = () => {
                 <audio ref={audioRef} src="/Audio/bad_liar.mp3" />
                 <SoundWave active={waveActive} />
             </motion.section>
-            <section className="flex flex-col h-full justify-center space-y-4 w-1/3 bg-teal-200 ">
-                <h2>El mundo suena como vos queres</h2>
-                <h1 className="text-4xl">Airpods</h1>
+            <section className="flex flex-col h-full justify-center p-10 space-y-4 w-[40%] bg-french-grey rounded-2xl ">
+                <div className='flex flex-col items-end pr-8'>
+                    <h1 className="text-6xl font-bold italic">Airpods</h1>
+                    <h2 className='text-xl '>El mundo suena como vos queres</h2>
+                </div>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Quae, voluptas?
+                  <span className='text-dim-grey'>En Hey Apple creemos que el sonido no debe interrumpir, sino acompañar.
+                  </span>  
+                  Inspirados en la visión de Jobs, diseñamos experiencias invisibles, pero inolvidables.
+                  Los AirPods se conectan solos, entienden tu ritmo y te liberan las manos —y la mente.
                 </p>
-
+                <div className='w-1/4 '>
+                    <PointButton text_1="Ver más" text_2="Airpods" />
+                </div>
             </section>
-
         </div>
     )
 }
