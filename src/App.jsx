@@ -13,6 +13,7 @@ import ScrollToTop from './Hooks/ScrollToTop'
 import { Privacy } from './Pages/Legal/Privacy'
 import { Terms } from './Pages/Legal/Terms'
 import { Error404 } from './Pages/404Error'
+import { Construction } from './Pages/Construction'
 
 function App() {
 
@@ -54,12 +55,12 @@ Te dejo el portfolio del verdadero genio detrás de esto:
 
       <Routes>
         <Route index element={<Home />} />
-        <Route path="/iphone" element={<IphonePage />} />
+        {/* <Route path="/iphone" element={<IphonePage />} /> */}
         <Route path="legal">
           <Route path="privacy" element={<Privacy />} />
           <Route path="terms" element={<Terms/>} />
         </Route>
-        <Route path="*" element={<Error404  startTransition={startTransition} />} />
+        <Route path="*" element={<Construction  startTransition={startTransition} />} />
       </Routes>
       <Footer startTransition={startTransition}/>
     </main>

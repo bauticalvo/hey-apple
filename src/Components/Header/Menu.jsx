@@ -1,10 +1,10 @@
-
 import { motion } from 'framer-motion';
 import { useLocation, useNavigate } from 'react-router';
 import MotionButton from '../Custom/MotionButton';
 import { IoIosArrowRoundForward } from "react-icons/io";
 import MotionIcon from '../Custom/MotionIcon';
 import { useState } from 'react';
+import { data_buttons } from './header';
 
 
 const Menu = ({ isOpen, setIsOpen, startTransition}) => {
@@ -20,7 +20,7 @@ const Menu = ({ isOpen, setIsOpen, startTransition}) => {
 
     return (
       <motion.div
-        className='text-xl font-bold'
+        className='font-bold'
         onClick={() => {
           setIsOpen(false);
           if (location.pathname === path) return;
@@ -58,10 +58,14 @@ const Menu = ({ isOpen, setIsOpen, startTransition}) => {
               exit={{ opacity: 0, y: "-100%" }}
               transition={{ duration: 0.5 }}
           >
-            <motion.section className='my-10 p-2 text-xl font-bold flex flex-col items-center space-y-20 '>
-              <NavigationButton text_1={"Inicio"} text_2={"Inicio"} path={"/"}/>
-              <NavigationButton text_1={"Iphone"} text_2={"Iphone"} path={"/iphone"}/>
-              <NavigationButton text_1={"Mac"} text_2={"Mac"} path={"/mac"}/>
+            <motion.section className='my-10 p-2 text-xl font-bold flex flex-col items-center space-y-10 md:space-y-20 '>
+              {
+                data_buttons.map((item, index) => {
+                  return (
+                    <NavigationButton key={index} text_1={item.text} text_2={item.text} path={item.link} />
+                  )
+                })
+              }
             </motion.section>
 
             <section className='flex space-x-8 '>

@@ -43,13 +43,13 @@ export const HeroSection = () => {
         />
         <div className="text-background flex flex-col h-full justify-between p-20 absolute z-10 top-0 left-0">
           <h1 className="text-9xl w-1/2 italic font-semibold">
-            El futuro tiene tu nombre
+            El futuro tiene tu nombre.
           </h1>
           <p className="text-4xl w-1/2 font-medium italic">
             <span className="text-footer">
               Cada producto Apple es una herramienta para cambiar el mundo.
             </span>{' '}
-            Empezá por el tuyo
+            Empezá por el tuyo.
           </p>
         </div>
       </section>
