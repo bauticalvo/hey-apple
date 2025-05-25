@@ -4,7 +4,7 @@ import MotionButton from '../Custom/MotionButton';
 import { IoIosArrowRoundForward } from "react-icons/io";
 import MotionIcon from '../Custom/MotionIcon';
 import { useState } from 'react';
-import { data_buttons } from './Header';
+import { data_buttons } from '../../Data/data';
 
 
 const Menu = ({ isOpen, setIsOpen, startTransition}) => {
