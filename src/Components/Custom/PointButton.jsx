@@ -1,15 +1,25 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { FaPlus } from "react-icons/fa6";
+import { usePageTransition } from "../../Hooks/usePageTransition";
+import { useLocation, useNavigate } from "react-router";
 
-const PointButton = ({ text_1, text_2, dark, plus}) => {
+const PointButton = ({ text_1, text_2, link}) => {
   const [hovered, setHovered] = useState(false);
+  const { startTransition } = usePageTransition();
+  const navigate = useNavigate()
+  const location = useLocation()
+
 
   return (
     <motion.button
       className={`relative  hover:cursor-pointer flex flex-row items-center text-background p-1  w-full  h-auto bg-text rounded-full`}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
+      onClick={() => {
+        if(location.pathname === link) return
+        startTransition(navigate, link)
+    }}
     >
       <div className="flex w-full py-2 text-center text-lg items-center justify-center">
         <motion.span

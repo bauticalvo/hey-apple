@@ -67,6 +67,7 @@ export const Footer = ({startTransition}) => {
                     <div className="flex space-x-4">
                         <img
                             src="/Images/steve_jobs.jpg"
+                            alt="Steve Jobs"
                             className="w-12 rounded-full"
                         />
                         <div className="flex flex-col space-y-0">

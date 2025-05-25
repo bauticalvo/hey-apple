@@ -3,35 +3,36 @@ import { Canvas,  } from '@react-three/fiber';
 import {  OrbitControls } from '@react-three/drei';
 import { Iphone } from '../Models/Iphone_video';
 import PointButton from '../Custom/PointButton';
+import Spline from '@splinetool/react-spline';
 
 
 
-export const FirstProduct = () => {
+export const ThirdProduct = () => {
   return (
     <div className="h-[90vh] w-full p-6 m-20 bg-background flex">
       <section className="flex flex-col h-full items-center justify-center p-10 space-y-8 w-[40%] bg-french-grey rounded-2xl ">
         <div className='flex flex-col w-full items-start space-y-3'>
             <h1 className="text-5xl md:text-6xl font-bold italic underline underline-offset-8 text-text">
-              iPhone
+              iPad
             </h1>
             <h2 className='text-lg md:text-xl text-hey-green font-semibold'>
-              Guarda tus experiencias
+              Donde nacen las ideas
             </h2>
         </div>
         <div className='w-full flex flex-col space-y-3'>
             <p className="w-[80%] leading-relaxed text-justify">
                 <span className="text-dim-grey block">
-                  El iPhone no solo saca fotos, atrapa emociones, recuerdos, detalles.
+                    Dales a tus ideas el espacio que se merecen.
                 </span>
                 <span className="text-black font-medium">
-                  Con iPhone, capturar una foto increíble o grabar un video impactante es tan simple como tocar la pantalla. Todo funciona con fluidez, el detalle es asombroso y el color se ve tal como lo recordás. Porque cuanto menos pensás en cómo hacerlo, más presente estás en el momento.
+                Escultura en 3D, composición musical o arte en Adobe Fresco. La pantalla táctil completamente envolvente del iPad es el lienzo perfecto para darle rienda suelta a tu creatividad.
                 </span>
             </p>
 
         </div>
         <div className='w-full flex justify-start pt-4'>
             <div className='w-1/2 '>
-                <PointButton text_1="Ver más" text_2="iPhone" link={"/iphone"} />
+                <PointButton text_1="Ver más" text_2="iPad" link={"/ipad"} />
             </div>
         </div>
     </section>
@@ -42,15 +43,7 @@ export const FirstProduct = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: 'easeOut' }}
     >
-      <Canvas 
-      camera={{ position: [-10, 0, 0], fov: 10 }}
-      style={{ width: '100%', height: '100%' }}
-      >
-        <ambientLight intensity={0.1} />
-        <directionalLight position={[2, 2, 2]} />
-        <Iphone />
-        <OrbitControls enableZoom={false} />
-      </Canvas>
+        <Spline scene="/Scenes/ipad.splinecode" />
     </motion.section>
     </div>
   );

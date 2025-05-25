@@ -66,7 +66,7 @@ export const SecondProduct = () => {
     };
 
     return (
-        <div className="h-[90vh] w-full p-2 m-20  flex">
+        <div className="h-[90vh] w-full p-6 m-20  flex">
             <motion.section 
                 className="h-full w-[60%] relative overflow-visible"
                 onMouseEnter={handleMouseEnter}
@@ -76,19 +76,31 @@ export const SecondProduct = () => {
                 <audio ref={audioRef} src="/Audio/bad_liar.mp3" />
                 <SoundWave active={waveActive} />
             </motion.section>
-            <section className="flex flex-col h-full justify-center p-10 space-y-4 w-[40%] bg-french-grey rounded-2xl ">
-                <div className='flex flex-col items-end pr-8'>
-                    <h1 className="text-6xl font-bold italic">Airpods</h1>
-                    <h2 className='text-xl '>El mundo suena como vos queres</h2>
+
+            <section className="flex flex-col h-full items-center justify-center p-10 space-y-8 w-[40%] bg-french-grey rounded-2xl ">
+                <div className='flex flex-col w-full items-start space-y-3'>
+                    <h1 className="text-5xl md:text-6xl font-bold italic underline underline-offset-8 text-text">
+                        Airpods
+                    </h1>
+                    <h2 className='text-lg md:text-xl text-hey-green font-semibold'>
+                        El mundo suena como vos querés
+                    </h2>
                 </div>
-                <p>
-                  <span className='text-dim-grey'>En Hey Apple creemos que el sonido no debe interrumpir, sino acompañar.
-                  </span>  
-                  Inspirados en la visión de Jobs, diseñamos experiencias invisibles, pero inolvidables.
-                  Los AirPods se conectan solos, entienden tu ritmo y te liberan las manos —y la mente.
-                </p>
-                <div className='w-1/4 '>
-                    <PointButton text_1="Ver más" text_2="Airpods" />
+                <div className='w-full flex flex-col space-y-3'>
+                    <p className="w-[80%] leading-relaxed text-justify">
+                        <span className="text-dim-grey block">
+                            En Hey Apple creemos que el sonido no debe interrumpir, sino acompañar.
+                        </span>
+                        <span className="text-black font-medium">
+                            Con el Audio Espacial personalizado y seguimiento dinámico de la cabeza, te sumergís en una experiencia tridimensional sorprendente —como en el cine. Diseñamos conexiones invisibles pero inolvidables, que entienden tu ritmo, se conectan solas y liberan tus manos —<span className="italic font-normal">y tu mente</span>.
+                        </span>
+                    </p>
+
+                </div>
+                <div className='w-full flex justify-start pt-4'>
+                    <div className='w-1/2 '>
+                        <PointButton text_1="Ver más" text_2="Airpods" link={"/airpods"} />
+                    </div>
                 </div>
             </section>
         </div>
