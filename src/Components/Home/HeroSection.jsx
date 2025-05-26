@@ -59,7 +59,7 @@ export const HeroSection = () => {
             absolute z-10 top-0 left-0 w-full">
           <h1 className="
             font-semibold italic
-            text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl
+            text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl
             w-full sm:w-4/5 md:w-3/4 lg:w-2/3 xl:w-1/2
             ">
             El futuro tiene tu nombre.
@@ -71,7 +71,7 @@ export const HeroSection = () => {
               w-full sm:w-4/5 md:w-3/4 lg:w-2/3 xl:w-1/2
               ">
               <span className="text-footer">
-                Cada producto Apple es una herramienta para cambiar el mundo.
+                Hey Apple te acerca a los productos que cambiaron el mundo.
               </span>{' '}
               Empezá por el tuyo.
             </p>

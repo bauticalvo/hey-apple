@@ -27,6 +27,18 @@ export const Footer = ({startTransition}) => {
             title: "Mac",
             link: "/mac",
         },
+        {
+            title: "Airpods",
+            link: "/airpods", 
+        },
+        {
+            title: "Productos",
+            link: "/products", 
+        },
+        {
+            title: "Tienda",
+            link: "/tienda",
+        },
     ]
 
     const SocialButton = ({url,text}) =>{

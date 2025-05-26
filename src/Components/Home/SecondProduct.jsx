@@ -1,6 +1,7 @@
 import Spline from '@splinetool/react-spline';
 import { motion } from 'framer-motion';
-import { useRef, useState } from 'react';
+import { Suspense, useRef, useEffect, useState } from 'react';
+
 import PointButton from '../Custom/PointButton';
 
 // SoundWave component for the wave animation
@@ -41,17 +42,8 @@ export const SecondProduct = () => {
     const audioRef = useRef(null);
     const [waveActive, setWaveActive] = useState(false);
     const waveTimeout = useRef(null);
+    const splineRef2 = useRef(null);
 
-    const handleMouseEnter = () => {
-        if (waveTimeout.current) clearTimeout(waveTimeout.current);
-        waveTimeout.current = setTimeout(() => {
-            setWaveActive(true);
-            if (audioRef.current) {
-                audioRef.current.currentTime = 0;
-                audioRef.current.play();
-            }
-        }, 2000);
-    };
 
     const handleMouseLeave = () => {
         if (waveTimeout.current) {
@@ -65,19 +57,115 @@ export const SecondProduct = () => {
         }
     };
 
+    // Handler for when Spline is loaded
+    const handleSplineLoad = (spline) => {
+    spline.setZoom(1.5);
+      splineRef2.current = spline;
+    
+      
+    };
+  
+    const triggerSplineAnimation = () => {
+      if (splineRef2.current) {
+        splineRef2.current.emitEvent('mouseUp', 'airpods');
+      }
+    };
+  
+    useEffect(() => {
+      const checkAndTrigger = () => {
+        if (window.innerWidth < 900) {
+          triggerSplineAnimation();
+        }
+      };
+      checkAndTrigger();
+      window.addEventListener('resize', checkAndTrigger);
+      return () => window.removeEventListener('resize', checkAndTrigger);
+    }, []);
+  
+    const handleMouseUp = () => {
+      triggerSplineAnimation();
+      if(!waveActive){
+          if (waveTimeout.current) clearTimeout(waveTimeout.current);
+          waveTimeout.current = setTimeout(() => {
+              setWaveActive(true);
+              if (audioRef.current) {
+                  audioRef.current.currentTime = 0;
+                  audioRef.current.play();
+              }
+          }, 2000)
+      }
+    };
+
     return (
-        <div className="h-[90vh] w-full p-6 m-20  flex">
+        <div 
+            className="h-auto xl:h-[90vh] w-full p-2 md:p-6 m-20  bg-text flex flex-col xl:flex-row"
+            onMouseEnter={handleMouseUp}
+            onMouseLeave={handleMouseLeave}
+            onMouseUp={handleMouseUp}
+        >
+            <div className='flex flex-col h-full xl:hidden'>
+            <section className="flex flex-col min-h-[90vh] h-full items-center justify-center p-10 space-y-8  w-full  bg-french-grey rounded-2xl ">
+                <div className='flex flex-col w-full items-start space-y-3'>
+                    <h1 className="text-5xl md:text-6xl font-bold italic underline underline-offset-8 text-text">
+                        Airpods
+                    </h1>
+                    <h2 className='text-lg md:text-xl text-hey-green font-semibold'>
+                        El mundo suena como vos querés
+                    </h2>
+                </div>
+                <div className='w-full flex flex-col space-y-3'>
+                    <p className="w-[80%] leading-relaxed text-justify">
+                        <span className="text-dim-grey block">
+                            En Hey Apple creemos que el sonido no debe interrumpir, sino acompañar.
+                        </span>
+                        <span className="text-black font-medium">
+                            Con el Audio Espacial personalizado y seguimiento dinámico de la cabeza, te sumergís en una experiencia tridimensional sorprendente —como en el cine. Diseñamos conexiones invisibles pero inolvidables, que entienden tu ritmo, se conectan solas y liberan tus manos —<span className="italic font-normal">y tu mente</span>.
+                        </span>
+                    </p>
+
+                </div>
+                <div className='w-full h-full flex justify-start pt-4'>
+                    <div className='w-1/2 '>
+                        <PointButton text_1="Ver más" text_2="Airpods" link={"/airpods"} />
+                    </div>
+                </div>
+            </section>
+            <motion.section 
+                className="min-h-[60vh] flex items-center justify-center h-full w-full relative overflow-visible "
+            >
+                <audio ref={audioRef} src="/Audio/bad_liar.mp3" />
+                <SoundWave active={waveActive} />
+                <Suspense fallback={<div className='h-full flex justify-center items-center font-bold text-3xl'>
+                                        <h1>Cargando...</h1>
+                                    </div>}>
+                    <Spline 
+                        scene="/Scenes/airpods.splinecode"  
+                        onLoad={handleSplineLoad}
+                        className='h-full w-full'
+                    />
+                </Suspense>
+
+            </motion.section>
+
+            </div>
+
+            <div className='hidden xl:flex'>
             <motion.section 
                 className="h-full w-[60%] relative overflow-visible"
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
             >
-                <Spline scene="/Scenes/scene.splinecode" />
+                <Suspense fallback={<div className='h-full flex justify-center items-center font-bold text-3xl'>
+                                        <h1>Cargando...</h1>
+                                    </div>}>
+                    <Spline 
+                        scene="/Scenes/airpods.splinecode"  
+                        onLoad={handleSplineLoad}
+                    />
+                </Suspense>
                 <audio ref={audioRef} src="/Audio/bad_liar.mp3" />
                 <SoundWave active={waveActive} />
             </motion.section>
 
-            <section className="flex flex-col h-full items-center justify-center p-10 space-y-8 w-[40%] bg-french-grey rounded-2xl ">
+            <section className="flex flex-col h-full items-center justify-center p-10 space-y-8  w-[40%] bg-french-grey rounded-2xl ">
                 <div className='flex flex-col w-full items-start space-y-3'>
                     <h1 className="text-5xl md:text-6xl font-bold italic underline underline-offset-8 text-text">
                         Airpods
@@ -103,6 +191,7 @@ export const SecondProduct = () => {
                     </div>
                 </div>
             </section>
+            </div>
         </div>
     )
 }

@@ -13,7 +13,7 @@ const PointButton = ({ text_1, text_2, link, style}) => {
 
   return (
     <motion.button
-      className={`relative  hover:cursor-pointer flex flex-row items-center text-background p-1  w-full  h-auto bg-text rounded-full`}
+      className={`relative  hover:cursor-pointer flex flex-row items-center text-background p-1  w-full  h-auto bg-hey-green rounded-full`}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       onClick={() => {
