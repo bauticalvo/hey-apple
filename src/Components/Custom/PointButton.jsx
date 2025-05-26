@@ -4,7 +4,7 @@ import { FaPlus } from "react-icons/fa6";
 import { usePageTransition } from "../../Hooks/usePageTransition";
 import { useLocation, useNavigate } from "react-router";
 
-const PointButton = ({ text_1, text_2, link}) => {
+const PointButton = ({ text_1, text_2, link, style}) => {
   const [hovered, setHovered] = useState(false);
   const { startTransition } = usePageTransition();
   const navigate = useNavigate()
@@ -21,7 +21,7 @@ const PointButton = ({ text_1, text_2, link}) => {
         startTransition(navigate, link)
     }}
     >
-      <div className="flex w-full py-2 text-center text-lg items-center justify-center">
+      <div className={`flex w-full  text-center text-lg items-center justify-center ${style ? " py-4": "py-2"}`}>
         <motion.span
           initial={{ y: 0, opacity: 1 }}
           animate={{ y: hovered ? 20 : 0, opacity: hovered ? 0 : 1 }}
@@ -43,7 +43,7 @@ const PointButton = ({ text_1, text_2, link}) => {
             initial={{scale: 1, }}
             animate={{ scale: hovered ? 1.1 : 0.8,  }}
             transition={{ duration: 0.3 }}
-            className=" rounded-full bg-background p-2"
+            className=" rounded-full bg-background p-2 mr-1"
           >
           </motion.div>
     </motion.button>

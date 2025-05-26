@@ -11,7 +11,7 @@ export const Header = ({isOpen, setIsOpen, startTransition}) => {
     const NavigationButton = ({text, link}) => {
         return (
            <button
-            className='text-lg font-bold italic cursor-pointer hover:scale-110 transition-all duration-300'
+            className='text-lg font-bold  cursor-pointer hover:scale-110 transition-all duration-300'
             onClick={() => {
                 setIsOpen(false);
                 if (location.pathname === link) return;
