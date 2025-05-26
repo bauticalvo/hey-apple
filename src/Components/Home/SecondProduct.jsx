@@ -59,15 +59,12 @@ export const SecondProduct = () => {
 
     // Handler for when Spline is loaded
     const handleSplineLoad = (spline) => {
-    spline.setZoom(1.5);
       splineRef2.current = spline;
-    
-      
     };
   
     const triggerSplineAnimation = () => {
       if (splineRef2.current) {
-        splineRef2.current.emitEvent('mouseUp', 'airpods');
+        splineRef2.current.emitEvent('mouseUp', 'airpod');
       }
     };
   
@@ -84,21 +81,21 @@ export const SecondProduct = () => {
   
     const handleMouseUp = () => {
       triggerSplineAnimation();
-      if(!waveActive){
-          if (waveTimeout.current) clearTimeout(waveTimeout.current);
-          waveTimeout.current = setTimeout(() => {
-              setWaveActive(true);
-              if (audioRef.current) {
-                  audioRef.current.currentTime = 0;
-                  audioRef.current.play();
-              }
-          }, 2000)
-      }
+       if(!waveActive){
+           if (waveTimeout.current) clearTimeout(waveTimeout.current);
+           waveTimeout.current = setTimeout(() => {
+               setWaveActive(true);
+               if (audioRef.current) {
+                   audioRef.current.currentTime = 0;
+                   audioRef.current.play();
+               }
+           }, 2000)
+       }
     };
 
     return (
         <div 
-            className="h-auto xl:h-[90vh] w-full p-2 md:p-6 m-20  bg-text flex flex-col xl:flex-row"
+            className="h-auto xl:h-[90vh] w-full p-2 md:p-6 m-20 flex flex-col xl:flex-row"
             onMouseEnter={handleMouseUp}
             onMouseLeave={handleMouseLeave}
             onMouseUp={handleMouseUp}
@@ -131,19 +128,20 @@ export const SecondProduct = () => {
                 </div>
             </section>
             <motion.section 
-                className="min-h-[60vh] flex items-center justify-center h-full w-full relative overflow-visible "
+                className="min-h-[500px]  flex items-center justify-center h-full w-full relative overflow-visible "
             >
                 <audio ref={audioRef} src="/Audio/bad_liar.mp3" />
                 <SoundWave active={waveActive} />
-                <Suspense fallback={<div className='h-full flex justify-center items-center font-bold text-3xl'>
-                                        <h1>Cargando...</h1>
-                                    </div>}>
-                    <Spline 
-                        scene="/Scenes/airpods.splinecode"  
-                        onLoad={handleSplineLoad}
-                        className='h-full w-full'
-                    />
-                </Suspense>
+                <div className='md:w-1/2'>
+                    <Suspense fallback={<div className='h-full flex justify-center items-center font-bold text-3xl'>
+                                            <h1>Cargando...</h1>
+                                        </div>}>
+                        <Spline 
+                            scene="/Scenes/airpods_responsive.splinecode"  
+                            onLoad={handleSplineLoad}
+                            />
+                    </Suspense>
+                </div>
 
             </motion.section>
 

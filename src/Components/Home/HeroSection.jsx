@@ -1,15 +1,12 @@
-'use client';
-
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import PointButton from '../Custom/PointButton';
 
 gsap.registerPlugin(ScrollTrigger);
 
-export const HeroSection = () => {
+export const HeroSection = ({isMobile}) => {
   const containerRef = useRef(null);
-  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     // GSAP animation
@@ -32,15 +29,6 @@ export const HeroSection = () => {
     return () => ctx.revert();
   }, []);
 
-  useEffect(() => {
-    // Function to check if screen is below md (Tailwind's md is 768px)
-    const checkIsMobile = () => {
-      setIsMobile(window.innerWidth < 900);
-    };
-    checkIsMobile();
-    window.addEventListener('resize', checkIsMobile);
-    return () => window.removeEventListener('resize', checkIsMobile);
-  }, []);
 
   return (
     <div className="h-[92vh] px-2 w-full flex justify-center items-center overflow-hidden">

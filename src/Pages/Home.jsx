@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { FirstProduct } from "../Components/Home/FirstProduct";
 import { GalleryProduct } from "../Components/Home/GalleryProduct";
 import { HeroSection } from "../Components/Home/HeroSection";
@@ -7,14 +8,26 @@ import { ThirdProduct } from "../Components/Home/ThirdProduct";
 
 
 export const Home = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    // Function to check if screen is below md (Tailwind's md is 768px)
+    const checkIsMobile = () => {
+      setIsMobile(window.innerWidth < 900);
+    };
+    checkIsMobile();
+    window.addEventListener('resize', checkIsMobile);
+    return () => window.removeEventListener('resize', checkIsMobile);
+  }, []);
+
 
   return (
     <div className="min-h-[90vh] mt-[7.1vh] flex flex-col justify-center items-center">
-        <HeroSection />
+        <HeroSection isMobile={isMobile} />
         {/* <InfoSection />
         <FirstProduct /> */}
         <SecondProduct />
-        <ThirdProduct />
+        <ThirdProduct/>
         {/* <GalleryProduct /> */}
     </div>
   );
