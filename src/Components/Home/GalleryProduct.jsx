@@ -1,10 +1,10 @@
 import { useNavigate } from 'react-router';
 import { usePageTransition } from '../../Hooks/usePageTransition';
 import PointButton from '../Custom/PointButton';
+import { motion } from 'framer-motion';
 
 export const GalleryProduct = () => {
     const navigate = useNavigate();
-
     const { startTransition } = usePageTransition();
 
     const data = [
@@ -40,14 +40,20 @@ export const GalleryProduct = () => {
 
     return (
         <div className="w-full flex flex-col items-center space-y-8 mt-10 sm:mt-14 md:mt-16 lg:mt-20">
-            <div className="flex flex-col space-y-2 sm:space-y-4 items-center py-8 sm:py-12 md:py-16 lg:py-20">
+            <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.5 }}
+                transition={{ duration: 0.6 }}
+                className="flex flex-col space-y-2 sm:space-y-4 items-center py-8 sm:py-12 md:py-16 lg:py-20"
+            >
                 <h1 className="italic font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-5xl">
                     Todos los productos Hey Apple
                 </h1>
                 <h1 className="font-normal text-base sm:text-lg md:text-xl xl:text-2xl 2xl:text-xl">
                     Descubri todos los productos
                 </h1>
-            </div>
+            </motion.div>
             <section className="
                 w-full
                 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-2
@@ -55,7 +61,11 @@ export const GalleryProduct = () => {
                 px-2 sm:px-6 md:px-12 lg:px-20 xl:px-24 2xl:px-24
             ">
                 {data.map((item, index) => (
-                    <section 
+                    <motion.section 
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, amount: 0.3 }}
+                        transition={{ duration: 0.6, delay: index * 0.1 }}
                         className="flex flex-col space-y-2"
                         onClick={() => {
                             startTransition(navigate, item.link); 
@@ -72,13 +82,19 @@ export const GalleryProduct = () => {
                                 <h1 className="font-semibold text-lg sm:text-xl md:text-2xl text-text">{item.title}</h1>
                             </div>
                         </div> 
-                    </section>
+                    </motion.section>
                 ))}
             </section>
 
-            <div className='w-3/4 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4 2xl:w-1/4'>
+            <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.5 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className='w-3/4 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4 2xl:w-1/4'
+            >
                 <PointButton text_1="Ver todos los productos" text_2="Ver todos los productos" link="/products" style={true}/>
-            </div> 
+            </motion.div> 
         </div>
     )
 }

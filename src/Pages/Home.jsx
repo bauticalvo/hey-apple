@@ -24,11 +24,11 @@ export const Home = () => {
   return (
     <div className="min-h-[90vh] mt-[7.1vh] flex flex-col justify-center items-center">
         <HeroSection isMobile={isMobile} />
-        {/* <InfoSection />
-        <FirstProduct /> */}
+        <InfoSection />
+        {/* <FirstProduct /> */}
         <SecondProduct />
         <ThirdProduct/>
-        {/* <GalleryProduct /> */}
+        <GalleryProduct />
     </div>
   );
 };
