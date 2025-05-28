@@ -1,29 +1,26 @@
-
-
-
 export const Loader = () => {
-    return (
-      <div className="fixed inset-0 bg-black z-100 flex items-center justify-center">
-        <div className="flex flex-col items-center space-y-4">
-          <svg className=" animate-pulse  h-12 w-12 text-white" viewBox="0 0 24 24">
-            <circle
-              className="opacity-25"
-              cx="12"
-              cy="12"
-              r="10"
-              stroke="currentColor"
-              strokeWidth="1"
-              fill="none"
+  return (
+    <div className="fixed inset-0 bg-black z-[100] flex items-center justify-center">
+      <div className="flex flex-col items-center space-y-6 md:space-y-8">
+        <img
+          src="/Logos/hey-apple_logo.png"
+          alt="Logo de carga"
+          className="h-20 w-auto md:h-32 xl:h-40 animate-pulse"
+        />
+        {/* Contenedor de los puntos animados */}
+        <div className="flex space-x-2">
+          {[0, 1, 2].map((i) => (
+            <div
+              key={i}
+              className="h-2 w-2 bg-white rounded-full opacity-0"
+              style={{
+                animation: `pulse 1.5s infinite ease-in-out`,
+                animationDelay: `${i * 0.3}s`, // Escalonamos la animación
+              }}
             />
-            <path
-              className="opacity-75"
-              fill="currentColor"
-              d="M4 12a8 8 0 018-8v8H4z"
-            />
-          </svg>
-          <p className="text-white text-lg">Cargando...</p>
+          ))}
         </div>
       </div>
-    );
-  }
-  
+    </div>
+  );
+};

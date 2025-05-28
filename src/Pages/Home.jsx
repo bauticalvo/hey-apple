@@ -5,6 +5,7 @@ import { HeroSection } from "../Components/Home/HeroSection";
 import { InfoSection } from "../Components/Home/InfoSection";
 import { SecondProduct } from "../Components/Home/SecondProduct";
 import { ThirdProduct } from "../Components/Home/ThirdProduct";
+import { LocationSection } from "../Components/Home/LocationSection";
 
 
 export const Home = () => {
@@ -29,6 +30,7 @@ export const Home = () => {
         <SecondProduct />
         <ThirdProduct/>
         <GalleryProduct />
+        {/* <LocationSection /> */}
     </div>
   );
 };
