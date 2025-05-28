@@ -60,7 +60,6 @@ export const HeroSection = ({ isMobile }) => {
           autoPlay
           muted
           defaultMuted
-          loop
           playsInline
           webkitPlaysInline
           preload="auto"
@@ -72,7 +71,6 @@ export const HeroSection = ({ isMobile }) => {
           autoPlay
           muted
           defaultMuted
-          loop
           playsInline
           webkitPlaysInline
           preload="auto"
