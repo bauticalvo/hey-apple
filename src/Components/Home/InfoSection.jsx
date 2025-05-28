@@ -3,7 +3,7 @@ import { motion } from "framer-motion"
 
 export const InfoSection = () => {
     return(
-        <div className="h-screen w-full flex flex-col space-y-8 
+        <div className=" h-auto xl:h-screen w-full flex flex-col space-y-8 
             px-4 sm:px-8 md:px-16 lg:px-24 xl:px-36 2xl:px-44 
             items-start">
             <motion.div 

@@ -4,13 +4,12 @@ import MotionButton from '../Custom/MotionButton';
 import { IoIosArrowRoundForward } from "react-icons/io";
 import MotionIcon from '../Custom/MotionIcon';
 import { useState } from 'react';
-import { data_buttons } from '../../Data/data';
+import { data_buttons, Whatsapp_url, Instagram_url } from '../../Data/data';
 
 
 const Menu = ({ isOpen, setIsOpen, startTransition}) => {
 
-  const Whatsapp_url = "https://wa.me/5492644598868?text=Hola%20hey%20apple!%2C%20quiero%20conocer%20mas%20sobre%20sus%20productos"
-  const Instagram_url = "https://www.instagram.com/elascensormkt/"
+
 
 
   const NavigationButton = ({text_1, text_2, path}) => {

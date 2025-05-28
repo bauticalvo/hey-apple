@@ -4,42 +4,15 @@ import { motion } from 'framer-motion';
 import MotionIcon from "../Custom/MotionIcon";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { useLocation, useNavigate } from "react-router";
-
+import { navigationArray, Whatsapp_url, Instagram_url  } from "../../Data/data";
 
 
 export const Footer = ({startTransition}) => {
 
-    const Whatsapp_url = "https://wa.me/5492644598868?text=Hola%20hey%20apple!%2C%20quiero%20conocer%20mas%20sobre%20sus%20productos"
-    const Instagram_url = "https://www.instagram.com/elascensormkt/"
     const navigate = useNavigate()
     const location = useLocation()
 
-    const navigationArray = [
-        {
-            title: "Inicio",
-            link: "/", 
-        },
-        {
-            title: "iPhone",
-            link: "/iphone", 
-        },
-        {
-            title: "Mac",
-            link: "/mac",
-        },
-        {
-            title: "Airpods",
-            link: "/airpods", 
-        },
-        {
-            title: "Productos",
-            link: "/products", 
-        },
-        {
-            title: "Tienda",
-            link: "/tienda",
-        },
-    ]
+ 
 
     const SocialButton = ({url,text}) =>{
 

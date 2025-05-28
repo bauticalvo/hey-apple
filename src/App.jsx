@@ -35,10 +35,7 @@ function App() {
 
             
         `,
-      `       ¿Sos curioso? 😏
-
-Te dejo el portfolio del verdadero genio detrás de esto: 
-    https://bautistacalvo.vercel.app/`,
+     
   )
         isConsoleLogged.current = true // Evita que se imprima más de una vez
     }
