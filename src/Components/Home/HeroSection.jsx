@@ -53,10 +53,20 @@ export const HeroSection = ({isMobile}) => {
         className="h-full w-full rounded-2xl relative overflow-hidden will-change-transform"
       >
         <video
-          src={isMobile ? "/Videos/iphone_herosection_responsive.mp4" : "/Videos/iphone_herosection.mp4"}
-          className="h-full w-full rounded-2xl object-cover "
+          src="/Videos/iphone_herosection_responsive.mp4" 
+          className="h-full w-full rounded-2xl object-cover xl:hidden "
           autoPlay
           muted
+          playsinline
+          webkit-playsinline
+        />
+        <video
+          src="/Videos/iphone_herosection.mp4"
+          className="h-full w-full rounded-2xl object-cover hidden xl:flex "
+          autoPlay
+          muted
+          playsinline
+          webkit-playsinline
         />
         <div className="text-background flex flex-col h-full justify-between 
             p-4 sm:p-8 md:p-12 lg:p-16 xl:p-20 2xl:p-24 

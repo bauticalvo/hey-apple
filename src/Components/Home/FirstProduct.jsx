@@ -1,8 +1,9 @@
 import { motion } from 'framer-motion';
 import { Canvas,  } from '@react-three/fiber';
-import {  OrbitControls } from '@react-three/drei';
 import { Iphone } from '../Models/Iphone_video';
 import PointButton from '../Custom/PointButton';
+import { Suspense } from 'react';
+import { OrbitControls } from '@react-three/drei';
 
 
 
@@ -48,8 +49,10 @@ export const FirstProduct = () => {
       >
         <ambientLight intensity={0.1} />
         <directionalLight position={[2, 2, 2]} />
-        <Iphone />
-        <OrbitControls enableZoom={false} />
+        <Suspense >
+          <Iphone />
+        </Suspense>
+        <OrbitControls zoom={false} />
       </Canvas>
     </motion.section>
     </div>

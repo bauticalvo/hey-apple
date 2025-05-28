@@ -104,7 +104,7 @@ export const Footer = ({startTransition}) => {
                     </div>
                     <div className="flex items-center justify-center mt-8 md:mt-0">
                         <img
-                            src="/Logos/hey-apple-logo2.png" className="h-12 w-auto sm:h-16 md:h-20 xl:h-28"
+                            src="/Logos/hey-apple_logo2.png" className="h-12 w-auto sm:h-16 md:h-20 xl:h-28"
                         />
                     </div>
                 </div>
