@@ -30,7 +30,7 @@ export const Home = () => {
         <SecondProduct />
         <ThirdProduct/>
         <GalleryProduct />
-        {/* <LocationSection /> */}
+        <LocationSection />
     </div>
   );
 };

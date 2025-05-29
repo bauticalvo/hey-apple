@@ -32,7 +32,7 @@ export const InfoSection = () => {
                     transition={{ duration: 0.6, delay: 0.2 }}
                     className="col-span-1 h-fit"
                 >
-                    <StyledLabel />
+                    <StyledLabel text={"Nosotros"} />
                 </motion.div>
                 <div className="col-span-1 hidden xl:flex"></div>
                 <motion.div 

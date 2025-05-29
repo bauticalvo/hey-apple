@@ -5,7 +5,7 @@ export const Loader = () => {
         <img
           src="/Logos/hey-apple_logo.png"
           alt="Logo de carga"
-          className="h-20 w-auto md:h-32 xl:h-40 animate-pulse"
+          className="h-20 w-auto md:h-32 lg:h-40 animate-pulse"
         />
         {/* Contenedor de los puntos animados */}
         <div className="flex space-x-2">

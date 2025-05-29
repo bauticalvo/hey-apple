@@ -1,61 +1,96 @@
 import { StyledLabel } from "../Custom/StyledLabel"
 import { motion } from "framer-motion"
+import { IoIosArrowRoundForward } from "react-icons/io";
+import MotionIcon from "../Custom/MotionIcon";
+import { Whatsapp_url} from "../../Data/data"
 
 export const LocationSection = () => {
 
+    const StyledSection = ({title, id, content}) =>{
+
+        return (
+            <div className={`w-full h-full bg-white rounded-2xl p-1 hover:p-0 transition-all duration-300 
+                ${id === 3 ? "col-span-2" : "col-span-1"}
+                ${id === 1 ? "cursor-pointer" : ""}`}
+                onClick={id === 1 ? () => window.open(Whatsapp_url) : () => {}}
+                >
+                <div className="w-full h-full bg-background rounded-xl p-4 flex flex-col justify-around ">
+                    <h1 className="text-md lg:text-lg 2xl:text-xl font-semibold">{title}</h1>
+                    <div className="w-full flex justify-center  ">
+                        {
+                            id === 1 ? (
+                                <h1 className="text-sm lg:text-md 2xl:text-lg flex "> {content} <MotionIcon icon_1={IoIosArrowRoundForward} icon_2={IoIosArrowRoundForward} /> </h1>
+                            ) : (
+                                <h1 className="text-sm lg:text-md 2xl:text-lg "> {content} </h1>
+                            )
+                        }
+                    </div>
+                </div>
+            </div>
+        )
+    }
+
     return (
-        <div className=" h-auto xl:h-screen w-full flex flex-col space-y-8 
-        px-4 sm:px-8 md:px-16 lg:px-24 xl:px-36 2xl:px-44 
-        items-start">
-        <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.5 }}
-            transition={{ duration: 0.6 }}
-            className="h-1/2 flex items-end"
-        >
-            <h1 className="font-bold italic
-                text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-8xl
-            ">
-                Hey Apple.
-            </h1>
-        </motion.div>
-        <section className="
-            pt-8 sm:pt-12 md:pt-16 lg:pt-20
-            h-1/2 w-full
-            grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 
-            items-start justify-between gap-4
-        ">
-            <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.5 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="col-span-1 h-fit"
+        <div className=" h-auto lg:h-[90vh] w-full flex flex-col space-y-8 my-20
+        px-4 sm:px-8 md:px-16 lg:flex-row lg:px-24 xl:px-36 2xl:px-44 
+        items-end">
+            <section 
+                className="w-1/2 h-[90%] rounded-2xl hidden xl:flex bg-white p-1 hover:p-0 transition-all duration-300 "
+                id="map"
             >
-                <StyledLabel />
-            </motion.div>
-            <div className="col-span-1 hidden xl:flex"></div>
-            <motion.div 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.5 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-                className="
-                col-span-1 sm:col-span-1 lg:col-span-2
-                text-base sm:text-lg md:text-xl lg:text-2xl xl:text-2xl 2xl:text-2xl
-                text-text-op font-bold italic mt-2 px-0 sm:px-4 md:px-6 lg:px-10
-            ">
-                <div>
-                    <span className="text-text">Somos Hey Apple.</span> Nacimos para transmitir la esencia y filosofia de Apple y llevar la innovación más allá de los límites conocidos.
-                </div>
-                <div className="flex flex-col items-start mt-6 sm:mt-8 md:mt-10">
-                    <p className="mt-2 text-sm sm:text-base md:text-lg italic text-text">
-                    “Hay quienes compran tecnología. Y hay quienes entienden lo que es Apple.”
-                    </p>
-                </div>
-            </motion.div>
-        </section>
+                <img
+                    src="/Images/maps.png"
+                    alt="map"
+                    className="w-full h-full object-cover rounded-2xl"
+                />
+            </section>
+            <section className="w-full h-auto lg:w-1/2 lg:h-full rounded-2xl flex flex-col items-center lg:items-end  lg:py-20 space-y-8" >
+                <motion.div 
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.5 }}
+                    transition={{ duration: 0.6 }}
+                    className="h-full flex items-center text-center lg:items-end lg:text-end"
+                >
+                    <h1 className="font-bold italic
+                        text-3xl sm:text-5xl md:text-6xl lg:text-5xl 2xl:text-7xl
+                    ">
+                        Nuestro espacio. Tu próxima decisión.
+                    </h1>
+                </motion.div>
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.5 }}
+                    transition={{ duration: 0.6, delay: 0.2 }}
+                    className="w-full flex justify-center lg:justify-end h-fit"
+                >
+                    <StyledLabel text={"Local"} />
+                </motion.div>
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.5 }}
+                    transition={{ duration: 0.6, delay: 0.2 }}
+                    className="w-full h-full grid grid-cols-2 grid-row-2 gap-4 justify-around items-start lg:pl-20 2xl:pl-40  "
+                >
+                    <StyledSection title="Contacto" content={"Whatsapp"} id={1} />
+                    <StyledSection title="Horarios" content={"Lun a Sáb — 9:30-12h | 17-21h "} id={2} />
+                    <StyledSection title="Dirección" content={"Paseo Del Oeste, Av. José Ignacio de la Rosa Oeste"} id={3} />
+                </motion.div>
+                
+            </section>
+            <section 
+                className="w-full h-[40vh] rounded-2xl flex lg:hidden bg-white p-1" 
+                id="responsiveMap"
+                >
+                <img
+                    src="/Images/maps.png"
+                    alt="map"
+                    className="w-full h-full object-cover rounded-2xl"
+                />
+               </section>
+
     </div>
     )
 }

@@ -13,7 +13,7 @@ const MotionButton = ({ text_1, text_2, dark, plus}) => {
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      <div className="flex w-full py-2 text-center text-2xl md:text-3xl  xl:text-6xl items-center justify-center">
+      <div className="flex w-full py-2 text-center text-2xl md:text-3xl  lg:text-6xl items-center justify-center">
         <motion.span
           initial={{ y: 0, opacity: 1 }}
           animate={{ y: hovered ? 20 : 0, opacity: hovered ? 0 : 1 }}

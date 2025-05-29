@@ -45,10 +45,10 @@ export const Footer = ({startTransition}) => {
     }
 
     return (
-        <footer className="flex flex-col h-auto mt-8 xl:h-[90vh] ">
-            <section className="h-full w-full flex flex-col space-x-8 md:flex-row p-4 sm:p-8 md:p-12 xl:p-20 2xl:p-32">
+        <footer className="flex flex-col h-auto mt-8 lg:h-[90vh] ">
+            <section className="h-full w-full flex flex-col space-x-8 md:flex-row p-4 sm:p-8 md:p-12 lg:p-20 2xl:p-32">
                 <div className="w-full md:w-1/2 flex flex-col space-y-6 sm:space-y-8 2xl:px-32">
-                    <span className="italic text-xl sm:text-xl md:text-2xl xl:text-3xl 2xl:text-4xl">
+                    <span className="italic text-xl sm:text-xl md:text-2xl lg:text-3xl 2xl:text-4xl">
                         "No hemos sido los primeros, pero seremos los mejores, porque la innovación es lo que nos distingue."
                     </span>
                     <div className="flex space-x-3 sm:space-x-4">
@@ -104,12 +104,12 @@ export const Footer = ({startTransition}) => {
                     </div>
                     <div className="flex items-center justify-center mt-8 md:mt-0">
                         <img
-                            src="/Logos/hey-apple_logo2.png" className="h-12 w-auto sm:h-16 md:h-20 xl:h-28"
+                            src="/Logos/hey-apple_logo2.png" className="h-12 w-auto sm:h-16 md:h-20 lg:h-28"
                         />
                     </div>
                 </div>
             </section>
-            <section className='bg-text text-footer flex flex-col space-y-6 xl:space-y-0 xl:flex-row xl:px-8 justify-between items-center py-4 px-2 2xl:px-48 xl:h-[12vh] w-full'>
+            <section className='bg-text text-footer flex flex-col space-y-6 lg:space-y-0 lg:flex-row lg:px-8 justify-between items-center py-4 px-2 2xl:px-48 lg:h-[12vh] w-full'>
                 <div className="flex space-x-2 text-sm sm:text-base font-semibold">
                   <span>© 2025 Hey Apple. Todos los derechos reservados</span>
                 </div>
