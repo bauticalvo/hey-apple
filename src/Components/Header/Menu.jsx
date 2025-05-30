@@ -9,9 +9,6 @@ import { data_buttons, Whatsapp_url, Instagram_url } from '../../Data/data';
 
 const Menu = ({ isOpen, setIsOpen, startTransition}) => {
 
-
-
-
   const NavigationButton = ({text_1, text_2, path}) => {
 
   const navigate = useNavigate();

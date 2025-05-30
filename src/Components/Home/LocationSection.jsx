@@ -9,10 +9,14 @@ export const LocationSection = () => {
     const StyledSection = ({title, id, content}) =>{
 
         return (
-            <div className={`w-full h-full bg-white rounded-2xl p-1 hover:p-0 transition-all duration-300 
+            <motion.div className={`w-full h-full bg-white rounded-2xl p-1 hover:p-0 transition-all duration-300 
                 ${id === 3 ? "col-span-2" : "col-span-1"}
                 ${id === 1 ? "cursor-pointer" : ""}`}
                 onClick={id === 1 ? () => window.open(Whatsapp_url) : () => {}}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.7 }}
+                transition={{ duration: 0.6, delay: `0.${id}`}}
                 >
                 <div className="w-full h-full bg-background rounded-xl p-4 flex flex-col justify-around ">
                     <h1 className="text-md lg:text-lg 2xl:text-xl font-semibold">{title}</h1>
@@ -26,7 +30,7 @@ export const LocationSection = () => {
                         }
                     </div>
                 </div>
-            </div>
+            </motion.div>
         )
     }
 
@@ -67,17 +71,13 @@ export const LocationSection = () => {
                 >
                     <StyledLabel text={"Local"} />
                 </motion.div>
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, amount: 0.5 }}
-                    transition={{ duration: 0.6, delay: 0.2 }}
+                <div
                     className="w-full h-full grid grid-cols-2 grid-row-2 gap-4 justify-around items-start lg:pl-20 2xl:pl-40  "
                 >
                     <StyledSection title="Contacto" content={"Whatsapp"} id={1} />
                     <StyledSection title="Horarios" content={"Lun a Sáb — 9:30-12h | 17-21h "} id={2} />
                     <StyledSection title="Dirección" content={"Paseo Del Oeste, Av. José Ignacio de la Rosa Oeste"} id={3} />
-                </motion.div>
+                </div>
                 
             </section>
             <section 

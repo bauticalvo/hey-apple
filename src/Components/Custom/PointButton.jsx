@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { FaPlus } from "react-icons/fa6";
 import { usePageTransition } from "../../Hooks/usePageTransition";
 import { useLocation, useNavigate } from "react-router";
 

@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { FirstProduct } from "../Components/Home/FirstProduct";
 import { GalleryProduct } from "../Components/Home/GalleryProduct";
 import { HeroSection } from "../Components/Home/HeroSection";
 import { InfoSection } from "../Components/Home/InfoSection";
@@ -26,7 +25,6 @@ export const Home = () => {
     <div className="min-h-[90vh] mt-[7.1vh] flex flex-col justify-center items-center">
         <HeroSection isMobile={isMobile} />
         <InfoSection />
-        {/* <FirstProduct /> */}
         <SecondProduct />
         <ThirdProduct/>
         <GalleryProduct />
