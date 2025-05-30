@@ -3,6 +3,7 @@
 
 @theme {
   --color-background: #f5f5f7;
+  --color-alt-background: #fafafa;
   --color-text: #080808;
   --color-transition: #121212;
   --color-text-op: #878787;

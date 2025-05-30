@@ -13,6 +13,8 @@ import { Privacy } from './Pages/Legal/Privacy'
 import { Terms } from './Pages/Legal/Terms'
 import { Construction } from './Pages/Construction'
 import { IphonePage } from './Pages/IphonePage'
+import { MacPage } from './Pages/MacPage'
+import { AirpodsPage } from './Pages/AirpodsPage'
 
 function App() {
 
@@ -30,7 +32,9 @@ function App() {
 
       <Routes>
         <Route index element={<Home />} />
-        {/* <Route path="/iphone" element={<IphonePage />} /> */}
+        <Route path="/iphone" element={<IphonePage />} />
+        <Route path="/mac" element={<MacPage />} />
+        <Route path="/airpods" element={<AirpodsPage />} />
         <Route path="legal">
           <Route path="privacy" element={<Privacy />} />
           <Route path="terms" element={<Terms/>} />
