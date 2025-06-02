@@ -3,7 +3,7 @@ import { useState } from "react";
 import { usePageTransition } from "../../Hooks/usePageTransition";
 import { useLocation, useNavigate } from "react-router";
 
-const PointButton = ({ text_1, text_2, link, style}) => {
+const PointButton = ({ text_1, text_2, link, style, target}) => {
   const [hovered, setHovered] = useState(false);
   const { startTransition } = usePageTransition();
   const navigate = useNavigate()
@@ -16,6 +16,10 @@ const PointButton = ({ text_1, text_2, link, style}) => {
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       onClick={() => {
+        if(target == 1) {
+          window.open(link)
+          return
+        }
         if(location.pathname === link) return
         startTransition(navigate, link)
     }}

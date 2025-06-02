@@ -80,6 +80,7 @@ export const Footer = ({startTransition}) => {
                                         key={index}
                                         onMouseEnter={() => setHovered(true)}
                                         onMouseLeave={() => setHovered(false)}
+                                        className="flex flex-row space-x-2 text-start items-center"
                                     >           
                                         <AppleButton
                                         text={item.title}

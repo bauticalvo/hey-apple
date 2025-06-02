@@ -25,13 +25,13 @@ export const AppleButton = ({text, hovered, link, startTransition}) => {
                         animate={{ x: 0, opacity: 1 }}
                         exit={{ x: -12, opacity: 0 }}
                         transition={{ type: "tween", duration: 0.5, ease: "easeInOut" }}
-                        className="text-text text-lg flex items-center"
+                        className="text-text text-lg flex items-center "
                         >
                         <FaApple /> 
                     </motion.span>
                 )            
             }
-            <span className=" text-text  ">
+            <span className=" text-text text-start ">
                 {text}
             </span>
         </button>

@@ -59,6 +59,7 @@ export const Embajadores = () => {
                             text_2={"Contactanos"}
                             style={true}
                             link={Whatsapp_url}
+                            target={"1"}
                         />
                     </div>
                 </motion.div>
