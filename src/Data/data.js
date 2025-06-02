@@ -1,18 +1,18 @@
 export const data_buttons = [
-    {text: "AirPods", link: "/airpods"},
-    {text: "Iphone", link: "/iphone"},
-    {text: "Mac", link: "/mac"},
+    {text: "El sonido de tu mundo", link: "/airpods"},
+    {text: "Viví conectado", link: "/iphone"},
+    {text: "Potenciá tu mente", link: "/mac"},
     {text: "Ecosistema", link: "/products"},
-    {text: "Tienda", link: "/shop"},
+    {text: "Espacio Hey Apple", link: "/store"},
 ]
 
 export const navigationArray = [
     { title: "Inicio", link: "/" }, 
-    { title: "iPhone", link: "/iphone" }, 
-    { title: "Mac", link: "/mac" }, 
-    { title: "Airpods", link: "/airpods" }, 
+    { title: "Viví conectado", link: "/iphone" }, 
+    { title: "Potenciá tu mente", link: "/mac" }, 
+    { title: "El sonido de tu mundo", link: "/airpods" }, 
     { title: "Ecosistema", link: "/products" }, 
-    { title: "Tienda", link: "/tienda" },
+    { title: "Espacio Hey Apple", link: "/store" },
 ]
 
 export const Whatsapp_url = "https://wa.me/5492644598868?text=Hola%20hey%20apple!%2C%20quiero%20conocer%20mas%20sobre%20apple"

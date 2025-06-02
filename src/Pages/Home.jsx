@@ -5,6 +5,7 @@ import { InfoSection } from "../Components/Home/InfoSection";
 import { SecondProduct } from "../Components/Home/SecondProduct";
 import { ThirdProduct } from "../Components/Home/ThirdProduct";
 import { LocationSection } from "../Components/Home/LocationSection";
+import { Embajadores } from "../Components/Home/Embajadores";
 
 
 export const Home = () => {
@@ -28,6 +29,7 @@ export const Home = () => {
         <SecondProduct />
         <ThirdProduct/>
         <GalleryProduct />
+        <Embajadores />
         <LocationSection />
     </div>
   );

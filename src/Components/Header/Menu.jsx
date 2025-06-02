@@ -16,7 +16,7 @@ const Menu = ({ isOpen, setIsOpen, startTransition}) => {
 
     return (
       <motion.div
-        className='font-bold'
+        className='font-bold w-full flex'
         onClick={() => {
           setIsOpen(false);
           if (location.pathname === path) return;
@@ -54,7 +54,7 @@ const Menu = ({ isOpen, setIsOpen, startTransition}) => {
               exit={{ opacity: 0, y: "-100%" }}
               transition={{ duration: 0.5 }}
           >
-            <motion.section className='my-10 p-2 text-xl font-bold flex flex-col items-center space-y-10 md:space-y-20 '>
+            <motion.section className='my-10 w-full p-2 text-xl font-bold flex flex-col items-center space-y-10 md:space-y-20 '>
               {
                 data_buttons.map((item, index) => {
                   return (

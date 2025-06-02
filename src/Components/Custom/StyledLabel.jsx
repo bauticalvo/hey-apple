@@ -1,4 +1,3 @@
-import { FaCirclePlus } from "react-icons/fa6";
 import { FaApple } from "react-icons/fa";
 
 export const StyledLabel = ({text}) =>{

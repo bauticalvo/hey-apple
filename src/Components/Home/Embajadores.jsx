@@ -1,0 +1,68 @@
+import { Whatsapp_url } from "../../Data/data"
+import PointButton from "../Custom/PointButton"
+import { StyledLabel } from "../Custom/StyledLabel"
+import { motion } from "framer-motion"
+
+export const Embajadores = () => {
+
+
+    return(
+        <div className=" h-auto xl:h-auto w-full flex flex-col space-y-8 
+            px-4 py-20 md:p-16 lg:p-24 xl:p-36 2xl:px-44 
+            items-start">
+            <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.5 }}
+                transition={{ duration: 0.6 }}
+                className="h-1/2 flex items-end"
+            >
+                <h1 className="font-bold italic
+                    text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-8xl
+                ">
+                    Embajadores Hey Apple.
+                </h1>
+            </motion.div>
+            <section className="
+                pt-8 sm:pt-12 md:pt-16 lg:pt-20
+                h-1/2 w-full
+                grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 
+                items-start justify-between gap-4
+            ">
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.5 }}
+                    transition={{ duration: 0.6, delay: 0.2 }}
+                    className="col-span-2 h-fit"
+                >
+                    <StyledLabel text={"¿Estas listo para transformar sueños en metas?"} />
+                </motion.div>
+                <motion.div 
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.5 }}
+                    transition={{ duration: 0.6, delay: 0.4 }}
+                    className="
+                    col-span-1 md:col-span-2 lg:col-span-2
+                    text-base sm:text-lg md:text-xl lg:text-2xl xl:text-2xl 2xl:text-2xl
+                    text-text font-bold italic mt-2 px-0 sm:px-4 md:px-6 lg:px-10
+                ">
+                    <div>
+                        Ser Embajador Hey Apple es más que representar una marca. Es formar parte de una comunidad apasionada por la innovación, el diseño y la forma en que Apple cambia el mundo. Es conectar con otros, inspirar y construir juntos.
+                        <br/><br/> <span className="text-text-op">Ya sos parte de algo distinto.</span> Ahora es momento de hacerlo juntos.
+                        Escribinos y activá tu rol como Embajador Hey Apple.
+                    </div>
+                    <div className="flex flex-col items-start mt-6 sm:mt-8 md:mt-10">
+                        <PointButton 
+                            text_1={"Contactanos"}
+                            text_2={"Contactanos"}
+                            style={true}
+                            link={Whatsapp_url}
+                        />
+                    </div>
+                </motion.div>
+            </section>
+        </div>
+    )
+}
