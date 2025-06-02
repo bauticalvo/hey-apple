@@ -29,7 +29,7 @@ export const GalleryProduct = () => {
                 gap-4 sm:gap-6 lg:gap-8
                 px-2 sm:px-6 md:px-12 lg:px-20 2xl:px-24
             ">
-                {galleryData.map((item, index) => (
+                {galleryData.slice(0,4).map((item, index) => (
                     <Hovercard 
                         key={index}
                         index={index}

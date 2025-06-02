@@ -23,7 +23,7 @@ export const Hovercard = ({index,title, image, description, link}) => {
             <p className="font-semibold text-xs lg:text-lg text-dim-grey">{description}</p>
         </div>
         <div className="w-full relative col-span-1 bg-white row-span-1 p-1 flex justify-center items-center rounded-2xl hover:p-0 hover:transition-all hover:duration-300 cursor-pointer group">
-            <img src={image} alt={title} className="w-full h-auto object-cover rounded-2xl" />
+            <img src={image} alt={title} className="w-full h-[200px] md:h-[250px] lg:h-[380px] 2xl:h-[520px] object-cover rounded-2xl" />
             <div className="absolute inset-0 flex items-center justify-center rounded-2xl pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300 backdrop-blur-sm bg-black/20">
                 <h1 className="font-semibold text-lg sm:text-xl md:text-2xl text-background">{title}</h1>
             </div>

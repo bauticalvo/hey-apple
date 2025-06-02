@@ -2,7 +2,7 @@ export const data_buttons = [
     {text: "AirPods", link: "/airpods"},
     {text: "Iphone", link: "/iphone"},
     {text: "Mac", link: "/mac"},
-    {text: "Productos", link: "/products"},
+    {text: "Ecosistema", link: "/products"},
     {text: "Tienda", link: "/shop"},
 ]
 
@@ -11,7 +11,7 @@ export const navigationArray = [
     { title: "iPhone", link: "/iphone" }, 
     { title: "Mac", link: "/mac" }, 
     { title: "Airpods", link: "/airpods" }, 
-    { title: "Productos", link: "/products" }, 
+    { title: "Ecosistema", link: "/products" }, 
     { title: "Tienda", link: "/tienda" },
 ]
 
@@ -47,4 +47,39 @@ export const galleryData = [
         description: "Comodidad y calidad en un solo equipo.",
         link: "/imac"
     },
+    {
+        id: 5,
+        image: "/Images/ipad/ipad2.jpg",
+        title: "iPad.",
+        description: "Versátil, potente y siempre listo.",
+        link: "/ipad"
+    },
+    {
+        id: 6,
+        image: "/Images/iphone/iphone2.jpg",
+        title: "iPhone.",
+        description: "Tecnología que se siente viva.",
+        link: "/iphone"
+    },
+    {
+        id: 7,
+        image: "/Images/airpods/airpods1.jpg",
+        title: "Airpods.",
+        description: "Audio sin límites. Diseño icónico.",
+        link: "/airpods"
+    },
+    {
+        id: 8,
+        image: "/Images/airtag/airtag2.jpg",
+        title: "Airtag.",
+        description: "Encuentra con precisión, sin esfuerzo.",
+        link: "/airtag"
+    },
+    {
+        id: 9,
+        image: "/Images/pencil/pencil4.jpg",
+        title: "Apple Pencil.",
+        description: "Ideas que fluyen con un trazo.",
+        link: "/apple-pencil"
+    }    
 ]

@@ -13,7 +13,7 @@ export const OtherExperiencies = ({indices, title}) => {
         <div
           className="flex flex-col w-full space-y-8 items-center lg:justify-between xl:flex-row py-20 lg:py-20   "
         >
-          <h1 className="text-3xl md:text-4xl 2xl:text-5xl font-bold italic"> {title ? title : "Otras Experiencias"} </h1>
+          <h1 className="text-3xl text-center md:text-4xl 2xl:text-5xl font-bold italic"> {title ? title : "Ecosistema Hey Apple"} </h1>
           <div className="w-1/2 lg:w-1/6">
             <PointButton text_1={"Ver más"} text_2={"Ver más"} link={"/products"} />
           </div>

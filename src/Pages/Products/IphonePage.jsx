@@ -1,4 +1,5 @@
-import { PageScheme } from "../Components/Products/PageScheme";
+import { PageScheme } from "../../Components/Products/PageScheme";
+
 
 
 export const IphonePage = () => {

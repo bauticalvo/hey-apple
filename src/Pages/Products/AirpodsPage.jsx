@@ -1,4 +1,4 @@
-import { PageScheme } from "../Components/Products/PageScheme";
+import { PageScheme } from "../../Components/Products/PageScheme";
 
 
 export const AirpodsPage = () => {
@@ -26,7 +26,7 @@ const images = [
         description3={
           "Un sonido inmersivo, refinado y profundamente personal. Así suena la innovación."
         }
-         indices={[0,1]}
+        indices={[5,0]}
         images={images}
       />
     </>

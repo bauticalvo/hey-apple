@@ -55,7 +55,7 @@ export const PageScheme = ({label, title, description1, indices , images, label2
             </section>
             <section className="w-full flex flex-col lg:flex-row h-auto lg:h-[60vh] gap-4">
                 <div className="bg-white w-full h-full rounded-2xl p-1 hover:p-0 transition-all duration-500">
-                    <div className={`rounded-xl w-full h-full ${title === "Mac." ? "bg-alt-background" : "bg-background"} `}>
+                    <div className={`rounded-xl w-full h-full ${title === "Mac." || title === "iMac."  ? "bg-alt-background" : "bg-background"} `}>
                         <img 
                             src={images[0]}
                             alt={title}
@@ -64,7 +64,7 @@ export const PageScheme = ({label, title, description1, indices , images, label2
                     </div>
                 </div>
                 <div className="bg-white w-full h-full rounded-2xl p-1 hover:p-0 transition-all duration-500">
-                    <div className={`rounded-xl w-full h-full ${title === "Mac." ? "bg-alt-background" : "bg-background"} `}>
+                    <div className={`rounded-xl w-full h-full ${title === "Mac." ? "bg-alt-background" : title === "iMac." ? "bg-white" : "bg-background"} `}>
                         <img 
                             src={images[1]}
                             alt={title}

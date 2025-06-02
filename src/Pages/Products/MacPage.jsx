@@ -1,4 +1,5 @@
-import { PageScheme } from "../Components/Products/PageScheme";
+import { PageScheme } from "../../Components/Products/PageScheme";
+
 
 
 export const MacPage = () => {
@@ -26,7 +27,8 @@ const images = [
         description3={
           "Potencia profesional, batería que dura todo el día y una integración sin esfuerzo con todo tu ecosistema Apple."
         }
-        indices={[2,0]}
+        title2={"Tu mundo Apple empieza en Mac."}
+        indices={[2,7]}
         images={images}
       />
     </>

@@ -12,9 +12,15 @@ import ScrollToTop from './Hooks/ScrollToTop'
 import { Privacy } from './Pages/Legal/Privacy'
 import { Terms } from './Pages/Legal/Terms'
 import { Construction } from './Pages/Construction'
-import { IphonePage } from './Pages/IphonePage'
-import { MacPage } from './Pages/MacPage'
-import { AirpodsPage } from './Pages/AirpodsPage'
+import { IphonePage } from './Pages/Products/IphonePage'
+import { MacPage } from './Pages/Products/MacPage'
+import { AirpodsPage } from './Pages/Products/AirpodsPage'
+import { Products } from './Pages/Products/Products'
+import { WatchPage } from './Pages/Products/WatchPage'
+import { ImacPage } from './Pages/Products/ImacPage'
+import { IpadPage } from './Pages/Products/IpadPage'
+import { AirtagPage } from './Pages/Products/AirtagPage'
+import { PencilPage } from './Pages/Products/PencilPage'
 
 function App() {
 
@@ -35,6 +41,12 @@ function App() {
         <Route path="/iphone" element={<IphonePage />} />
         <Route path="/mac" element={<MacPage />} />
         <Route path="/airpods" element={<AirpodsPage />} />
+        <Route path="/watch" element={<WatchPage />} />
+        <Route path="/imac" element={<ImacPage />} />
+        <Route path="/ipad" element={<IpadPage />} />
+        <Route path="/airtag" element={<AirtagPage />} />
+        <Route path="/apple-pencil" element={<PencilPage />} />
+        <Route path="/products" element={<Products />} />
         <Route path="legal">
           <Route path="privacy" element={<Privacy />} />
           <Route path="terms" element={<Terms/>} />
