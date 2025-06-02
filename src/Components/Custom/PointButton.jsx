@@ -16,12 +16,13 @@ const PointButton = ({ text_1, text_2, link, style, target}) => {
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       onClick={() => {
-        if(target == 1) {
-          window.open(link)
+        if(location.pathname === link) return
+        if(target != 1) {
+          startTransition(navigate, link) 
           return
         }
-        if(location.pathname === link) return
-        startTransition(navigate, link)
+        window.open(link)
+        return
     }}
     >
       <div className={`flex w-full  text-center text-lg items-center justify-center ${style ? " py-4": "py-2"}`}>

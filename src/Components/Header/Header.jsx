@@ -36,7 +36,7 @@ export const Header = ({isOpen, setIsOpen, startTransition}) => {
 
                 <section className='max-lg:hidden h-full w-full flex items-center justify-evenly'>
                     {
-                        data_buttons.map((item, index) => {
+                        data_buttons.slice(1).map((item, index) => {
                             return (
                                 <NavigationButton key={index} text={item.text} link={item.link} />
                             )

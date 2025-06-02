@@ -1,4 +1,5 @@
 export const data_buttons = [
+    {text: "Inicio", link: "/"},
     {text: "El sonido de tu mundo", link: "/airpods"},
     {text: "Viví conectado", link: "/iphone"},
     {text: "Potenciá tu mente", link: "/mac"},
