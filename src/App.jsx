@@ -21,6 +21,7 @@ import { ImacPage } from './Pages/Products/ImacPage'
 import { IpadPage } from './Pages/Products/IpadPage'
 import { AirtagPage } from './Pages/Products/AirtagPage'
 import { PencilPage } from './Pages/Products/PencilPage'
+import { Error404 } from './Pages/404Error'
 
 function App() {
 
@@ -38,6 +39,7 @@ function App() {
 
       <Routes>
         <Route index element={<Home />} />
+
         <Route path="/iphone" element={<IphonePage />} />
         <Route path="/mac" element={<MacPage />} />
         <Route path="/airpods" element={<AirpodsPage />} />
@@ -47,11 +49,14 @@ function App() {
         <Route path="/airtag" element={<AirtagPage />} />
         <Route path="/apple-pencil" element={<PencilPage />} />
         <Route path="/products" element={<Products />} />
+
+        <Route path="/store" element={<Construction startTransition={startTransition} />} />
+
         <Route path="legal">
           <Route path="privacy" element={<Privacy />} />
           <Route path="terms" element={<Terms/>} />
         </Route>
-        <Route path="*" element={<Construction  startTransition={startTransition} />} />
+        <Route path="*" element={<Error404  startTransition={startTransition} />} />
       </Routes>
       <Footer startTransition={startTransition}/>
     </main>

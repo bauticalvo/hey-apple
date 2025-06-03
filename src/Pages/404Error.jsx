@@ -13,11 +13,9 @@ export const Error404 = ({startTransition}) => {
                     startTransition(navigate, "/")
                 }}
                 className="font-bold bg-text text-background hover:cursor-pointer rounded-full mt-8
-                    text-base px-6 py-3
-                    sm:text-lg sm:px-8 sm:py-4
-                    md:text-xl md:px-10 md:py-5
-                    xl:text-2xl xl:px-12 xl:py-6
-                    2xl:text-3xl 2xl:px-16 2xl:py-7
+                    text-base px-6 py-2
+                    md:text-xl md:px-10 md:py-3
+                    2xl:text-3xl 2xl:px-12 2xl:py-4
                 "
             >
                 Volver a la página principal

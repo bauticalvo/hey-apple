@@ -16,8 +16,21 @@ export const Products = () => {
                     className="h-1/2 w-full flex items-end mt-20"
             >
                 <h1 className="font-bold italic text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-7xl 2xl:text-8xl">
-                    Productos.
+                    Ecosistema Hey Apple.
                 </h1>
+            </motion.div>
+            <motion.div 
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.5 }}
+                    transition={{ duration: 0.6 }}
+                    className="h-1/2 w-1/2 flex items-end mt-20"
+            >
+                <p className="font-semibold italic text-md md:text-lg lg:text-xl 2xl:text-xl">
+               <span className="text-text-op"> En Hey Apple, cada producto está diseñado para potenciar al otro.</span> 
+                El ecosistema que creamos no es solo tecnología, es una experiencia fluida donde todos tus dispositivos trabajan en armonía.  
+                Descubrí cómo cada parte del ecosistema eleva tu día a día.
+                </p>
             </motion.div>
 
             </section>
