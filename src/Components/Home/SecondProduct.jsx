@@ -187,7 +187,7 @@ export const SecondProduct = () => {
                             onLoad={handleSplineLoad}
                         />
                     </Suspense>
-                    <audio ref={audioRef} src="/Audio/bad_liar.mp3" />
+                    {/* <audio ref={audioRef} src="/Audio/bad_liar.mp3" /> */}
                     <SoundWave active={waveActive} />
                 </motion.section>
 

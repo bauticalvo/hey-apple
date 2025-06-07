@@ -18,7 +18,7 @@ export const Embajadores = () => {
                 className="h-1/2 flex items-end"
             >
                 <h1 className="font-bold italic
-                    text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-8xl
+                    text-3xl sm:text-5xl md:text-6xl lg:text-6xl 2xl:text-7xl
                 ">
                     Embajadores Hey Apple.
                 </h1>

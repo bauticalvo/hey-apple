@@ -59,7 +59,7 @@ export const LocationSection = () => {
                     <h1 className="font-bold italic
                         text-3xl sm:text-5xl md:text-6xl lg:text-5xl 2xl:text-7xl
                     ">
-                        Nuestro espacio. Tu próxima decisión.
+                        Nuestro espacio <br/> Tu próxima decisión.
                     </h1>
                 </motion.div>
                 <motion.div

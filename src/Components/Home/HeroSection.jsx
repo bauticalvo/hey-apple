@@ -80,30 +80,32 @@ export const HeroSection = ({ isMobile }) => {
         <div className="text-background flex flex-col h-full justify-between 
           p-4 sm:p-8 md:p-12 lg:p-16 xl:p-20 2xl:p-24 
           absolute z-10 top-0 left-0 w-full">
-          <h1
-            ref={titleRef}
-            className="font-semibold italic
-            text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl
-            w-full sm:w-4/5 md:w-3/4 lg:w-2/3 xl:w-1/2">
-            El futuro tiene tu nombre.
-          </h1>
-          <div className="space-y-4">
-            <p
-              ref={descriptionRef}
-              className="font-medium italic
-              text-base sm:text-lg md:text-2xl lg:text-3xl xl:text-4xl
-              w-full sm:w-4/5 md:w-3/4 lg:w-2/3 xl:w-1/2">
-              <span className="text-footer">
-                Hey Apple te acerca a los productos que cambiaron el mundo.
-              </span>{' '}
-              Empezá por el tuyo.
-            </p>
-            <div
-              ref={buttonRef}
-              className="w-3/4 sm:w-1/2 md:w-1/3 lg:w-1/4 bg-white rounded-full p-1">
-              <PointButton text_1={'Más información'} text_2={'Más información'} link={'/iphone'} style={true} />
+            <div className='flex items-start lg:items-end h-1/2 pb-4' > 
+              <h1
+                ref={titleRef}
+                className="font-semibold italic
+                text-4xl sm:text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl
+                w-full sm:w-4/5 md:w-3/4 lg:w-2/3 xl:w-1/2">
+                El futuro tiene <br/> Tu nombre.
+              </h1>
             </div>
-          </div>
+            <div className="space-y-4 flex flex-col items-start justify-end lg:items-start h-1/2 pt-4">
+              <p
+                ref={descriptionRef}
+                className="font-medium italic
+                text-base sm:text-lg md:text-2xl lg:text-2xl xl:text-3xl
+                w-full sm:w-4/5 md:w-3/4 lg:w-1/3 2xl:w-1/2">
+                <span className="text-footer">
+                  Hey Apple te acerca a los productos que cambiaron el mundo.
+                </span>{' '}
+                Empezá por el tuyo.
+              </p>
+              <div
+                ref={buttonRef}
+                className="w-3/4 sm:w-1/2 md:w-1/3 lg:w-1/4 bg-white rounded-full p-1">
+                <PointButton text_1={'Más información'} text_2={'Más información'} link={'/iphone'} style={true} />
+              </div>
+            </div>
         </div>
       </section>
     </div>
