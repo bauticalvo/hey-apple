@@ -102,7 +102,7 @@ export const HeroSection = ({ isMobile }) => {
               </p>
               <div
                 ref={buttonRef}
-                className="w-3/4 sm:w-1/2 md:w-1/3 lg:w-1/4 bg-white rounded-full p-1">
+                className="w-3/4 sm:w-1/2 md:w-1/3 lg:w-1/4 bg-white rounded-full p-[2px]">
                 <PointButton text_1={'Más información'} text_2={'Más información'} link={'/iphone'} style={true} />
               </div>
             </div>
