@@ -37,7 +37,7 @@ export const LocationSection = () => {
     const Map = () =>{
         return (
             <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4254.992113945085!2d-68.5903371!3d-31.539219999999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9681411e275238b1%3A0x9a172a2372162c76!2sPaseo%20Del%20Oeste!5e1!3m2!1ses!2sar!4v1750267189114!5m2!1ses!2sar" 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3400.451554120526!2d-68.5903371!3d-31.539219999999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9681411e275238b1%3A0x9a172a2372162c76!2sPaseo%20Del%20Oeste!5e0!3m2!1ses!2sar!4v1750268969707!5m2!1ses!2sar" 
                     width="600" 
                     height="450" 
                     allowfullscreen="" 
@@ -48,7 +48,6 @@ export const LocationSection = () => {
                     ></iframe>
         )
     }
-
     return (
         <div className=" h-auto lg:h-[90vh] w-full flex flex-col space-y-8 my-20
         px-4 sm:px-8 md:px-16 lg:flex-row lg:px-24 xl:px-36 2xl:px-44 
