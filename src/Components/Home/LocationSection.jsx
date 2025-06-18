@@ -34,6 +34,21 @@ export const LocationSection = () => {
         )
     }
 
+    const Map = () =>{
+        return (
+            <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4254.992113945085!2d-68.5903371!3d-31.539219999999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9681411e275238b1%3A0x9a172a2372162c76!2sPaseo%20Del%20Oeste!5e1!3m2!1ses!2sar!4v1750267189114!5m2!1ses!2sar" 
+                    width="600" 
+                    height="450" 
+                    allowfullscreen="" 
+                    style={{ border: 0 }}
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"
+                    className="w-full h-full rounded-xl "
+                    ></iframe>
+        )
+    }
+
     return (
         <div className=" h-auto lg:h-[90vh] w-full flex flex-col space-y-8 my-20
         px-4 sm:px-8 md:px-16 lg:flex-row lg:px-24 xl:px-36 2xl:px-44 
@@ -42,11 +57,7 @@ export const LocationSection = () => {
                 className="w-1/2 h-[90%] rounded-2xl hidden xl:flex bg-white p-1 hover:p-0 transition-all duration-300 "
                 id="map"
             >
-                <img
-                    src="/Images/maps.png"
-                    alt="map"
-                    className="w-full h-full object-cover rounded-2xl"
-                />
+                <Map />
             </section>
             <section className="w-full h-auto lg:w-1/2 lg:h-full rounded-2xl flex flex-col items-center lg:items-end  lg:py-20 space-y-8" >
                 <motion.div 
@@ -84,11 +95,7 @@ export const LocationSection = () => {
                 className="w-full h-[40vh] rounded-2xl flex lg:hidden bg-white p-1" 
                 id="responsiveMap"
                 >
-                <img
-                    src="/Images/maps.png"
-                    alt="map"
-                    className="w-full h-full object-cover rounded-2xl"
-                />
+                <Map />
                </section>
 
     </div>
