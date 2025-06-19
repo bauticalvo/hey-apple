@@ -116,8 +116,8 @@ export const Footer = ({startTransition}) => {
                 </div>
 
                 <div className="flex flex-col items-center justify-center w-full sm:w-auto sm:flex-row space-y-2 sm:space-y-0 sm:space-x-8 text-sm sm:text-base font-semibold">
-                  <TermsButton url={"/privacy"} text={"Política de privacidad"}/>
-                  <TermsButton url={"/terms"} text={"Términos  y condiciones"}/>
+                  {/* <TermsButton url={"/privacy"} text={"Política de privacidad"}/>
+                  <TermsButton url={"/terms"} text={"Términos  y condiciones"}/> */}
                 </div>
 
                 <div className="flex space-x-2 items-start sm:justify-center text-sm sm:text-base font-semibold">

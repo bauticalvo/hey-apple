@@ -1,4 +1,3 @@
-import { StyledLabel } from "../Custom/StyledLabel"
 import { motion } from "framer-motion"
 
 export const InfoSection = () => {
