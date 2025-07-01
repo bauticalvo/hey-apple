@@ -16,7 +16,7 @@ export const navigationArray = [
     { title: "Espacio Hey Apple", link: "/store" },
 ]
 
-export const Whatsapp_url = "https://wa.me/5492644598868?text=Hola%20hey%20apple!%2C%20quiero%20conocer%20mas%20sobre%20apple"
+export const Whatsapp_url = "https://wa.me/5492645424387?text=Hola%20hey%20apple!%2C%20quiero%20conocer%20mas%20sobre%20apple"
 export const Instagram_url = "https://www.instagram.com/heyapple.latam/"
 
 export const galleryData = [
