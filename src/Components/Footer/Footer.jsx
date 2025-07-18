@@ -59,7 +59,7 @@ export const Footer = ({startTransition}) => {
     const AscensorSpan = () => {
         return (
             <span 
-                className='text-ascensor cursor-pointer uppercase mx-1'
+                className='text-ascensor cursor-pointer uppercase '
                 onClick={() =>{
                     window.open(ascensorLink)
                 }}
@@ -145,8 +145,8 @@ export const Footer = ({startTransition}) => {
                   <TermsButton url={"/terms"} text={"Términos  y condiciones"}/> */}
                 </div>
 
-                <div className="flex space-x-2 items-start sm:justify-center text-sm sm:text-base font-semibold ">
-                  <span>Realizado por </span> <BautiSpan/> para <AscensorSpan/>
+                <div className="flex space-x-1 items-start sm:justify-center text-sm sm:text-base font-semibold ">
+                  <span>Realizado por </span> <BautiSpan/> <span>para</span> <AscensorSpan/>
                   
                 </div>
            </section>
