@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import MotionIcon from "../Custom/MotionIcon";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { useLocation, useNavigate } from "react-router";
-import { navigationArray, Whatsapp_url, Instagram_url  } from "../../Data/data";
+import { navigationArray, Whatsapp_url, Instagram_url, bautiLink, ascensorLink  } from "../../Data/data";
 
 
 export const Footer = ({startTransition}) => {
@@ -44,6 +44,31 @@ export const Footer = ({startTransition}) => {
       ) 
     }
 
+    const BautiSpan = () => {
+        return (
+            <span 
+                className='text-bauti cursor-pointer '
+                onClick={() =>{
+                    window.open(bautiLink)
+                }}
+                >
+                    J.B.CALVO
+                </span>
+        )
+    }
+    const AscensorSpan = () => {
+        return (
+            <span 
+                className='text-ascensor cursor-pointer uppercase mx-1'
+                onClick={() =>{
+                    window.open(ascensorLink)
+                }}
+                >
+                    el ascensor
+                </span>
+        )
+    }
+    
     return (
         <footer className="flex flex-col h-auto mt-8 lg:h-[90vh] ">
             <section className="h-full w-full flex flex-col space-x-8 md:flex-row p-4 sm:p-8 md:p-12 lg:p-20 2xl:p-32">
@@ -120,13 +145,9 @@ export const Footer = ({startTransition}) => {
                   <TermsButton url={"/terms"} text={"Términos  y condiciones"}/> */}
                 </div>
 
-                <div className="flex space-x-2 items-start sm:justify-center text-sm sm:text-base font-semibold">
-                  <span>Realizado por </span>
-                  <button 
-                    className="text-ascensor decoration-ascensor italic underline hover:cursor-pointer"
-                    onClick={() => window.open("https://www.elascensor.com.ar/")}
-                  >
-                    El ascensor</button>
+                <div className="flex space-x-2 items-start sm:justify-center text-sm sm:text-base font-semibold ">
+                  <span>Realizado por </span> <BautiSpan/> para <AscensorSpan/>
+                  
                 </div>
            </section>
         </footer>
