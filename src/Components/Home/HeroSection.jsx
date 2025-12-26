@@ -55,7 +55,7 @@ export const HeroSection = ({ isMobile }) => {
         className="h-full w-full rounded-2xl relative overflow-hidden will-change-transform"
       >
         <video
-          src="/Videos/iphone_herosection_responsive.9s83a2.mp4"
+          src="/Videos/iphone_responsive.9s83a2.mp4"
           className="h-full w-full rounded-2xl object-cover xl:hidden"
           autoPlay
           muted
@@ -66,7 +66,7 @@ export const HeroSection = ({ isMobile }) => {
           onLoadedData={() => setIsVideoLoaded(true)}
         />
         <video
-          src="/Videos/iphone_herosection.9s83a2.mp4"
+          src="/Videos/iphone.9s83a2.mp4"
           className="h-full w-full rounded-2xl object-cover hidden xl:flex"
           autoPlay
           muted
