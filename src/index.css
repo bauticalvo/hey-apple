@@ -20,3 +20,7 @@
   --font-family: 'sf-pro-display';
                                                 
 }
+
+button{
+  cursor: pointer;
+}

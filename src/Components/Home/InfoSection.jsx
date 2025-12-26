@@ -15,7 +15,7 @@ export const InfoSection = () => {
                 <h1 className="font-bold italic
                     text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-8xl
                 ">
-                    Hey Apple.
+                    Ser Apple.
                 </h1>
                 
             </motion.div>
@@ -48,7 +48,7 @@ export const InfoSection = () => {
                     text-text-op font-bold italic mt-2
                 ">
                     <div>
-                        <span className="text-text">Somos Hey Apple.</span> Nacimos para transmitir la esencia y filosofia de Apple y llevar la innovación más allá de los límites conocidos.
+                        <span className="text-text">Somos Ser Apple.</span> Nacimos para transmitir la esencia y filosofia de Apple y llevar la innovación más allá de los límites conocidos.
                     </div>
                 </motion.div>
             </section>

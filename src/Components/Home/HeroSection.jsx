@@ -96,7 +96,7 @@ export const HeroSection = ({ isMobile }) => {
                 text-base sm:text-lg md:text-2xl lg:text-2xl xl:text-3xl
                 w-full sm:w-4/5 md:w-3/4 lg:w-1/3 2xl:w-1/2">
                 <span className="text-footer">
-                  Hey Apple te acerca a los productos que cambiaron el mundo.
+                  Ser Apple te acerca a los productos que cambiaron el mundo.
                 </span>{' '}
                 Empezá por el tuyo.
               </p>

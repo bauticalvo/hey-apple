@@ -19,7 +19,7 @@ export const Embajadores = () => {
             <h1 className="font-bold italic
                 text-3xl sm:text-5xl md:text-6xl lg:text-7xl 2xl:text-7xl
             ">
-                Embajadores Hey Apple.
+                Embajadores Ser Apple.
             </h1>
             
         </motion.div>
@@ -52,9 +52,9 @@ export const Embajadores = () => {
                 text-text font-bold italic mt-2
             ">
                 <div>
-                        Ser Embajador Hey Apple es más que representar una marca. Es formar parte de una comunidad apasionada por la innovación, el diseño y la forma en que Apple cambia el mundo. Es conectar con otros, inspirar y construir juntos.
+                        Ser Embajador Ser Apple es más que representar una marca. Es formar parte de una comunidad apasionada por la innovación, el diseño y la forma en que Apple cambia el mundo. Es conectar con otros, inspirar y construir juntos.
                         <br/><br/> <span className="text-text-op">Ya sos parte de algo distinto.</span> Ahora es momento de hacerlo juntos.
-                        Escribinos y activá tu rol como Embajador Hey Apple.
+                        Escribinos y activá tu rol como Embajador Ser Apple.
                 </div>
                 <div className="flex flex-col w-full lg:w-1/2 items-start mt-6 sm:mt-8 md:mt-10">
                         <PointButton 

@@ -17,7 +17,7 @@ export const GalleryProduct = () => {
                 className="flex flex-col space-y-2 sm:space-y-4 items-center py-8 sm:py-12 md:py-16 lg:py-20"
             >
                 <h1 className="italic font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
-                    Todos los productos Hey Apple
+                    Todos los productos Ser Apple
                 </h1>
                 <h1 className="font-normal text-base sm:text-lg md:text-xl lg:text-2xl 2xl:text-xl">
                     Descubri todos los productos

@@ -141,7 +141,7 @@ export const SecondProduct = () => {
                     <div className='w-full flex flex-col space-y-3'>
                         <p className="w-[80%] leading-relaxed text-justify">
                             <span className="text-dim-grey block">
-                                En Hey Apple creemos que el sonido no debe interrumpir, sino acompañar.
+                                En Ser Apple creemos que el sonido no debe interrumpir, sino acompañar.
                             </span>
                             <span className="text-black font-medium">
                                 Con el Audio Espacial personalizado y seguimiento dinámico de la cabeza, te sumergís en una experiencia tridimensional sorprendente —como en el cine. Diseñamos conexiones invisibles pero inolvidables, que entienden tu ritmo, se conectan solas y liberan tus manos —<span className="italic font-normal">y tu mente</span>.
@@ -203,7 +203,7 @@ export const SecondProduct = () => {
                     <div className='w-full flex flex-col space-y-3'>
                         <p className="w-[80%] leading-relaxed text-justify">
                             <span className="text-dim-grey block">
-                                En Hey Apple creemos que el sonido no debe interrumpir, sino acompañar.
+                                En Ser Apple creemos que el sonido no debe interrumpir, sino acompañar.
                             </span>
                             <span className="text-black font-medium">
                                 Con el Audio Espacial personalizado y seguimiento dinámico de la cabeza, te sumergís en una experiencia tridimensional sorprendente —como en el cine. Diseñamos conexiones invisibles pero inolvidables, que entienden tu ritmo, se conectan solas y liberan tus manos —<span className="italic font-normal">y tu mente</span>.

@@ -3,7 +3,7 @@ export const Loader = () => {
     <div className="fixed inset-0 bg-black z-[100] flex items-center justify-center">
       <div className="flex flex-col items-center space-y-6 md:space-y-8">
         <img
-          src="/Logos/hey-apple_logo.png"
+          src="/Logos/ser-apple_logo.png"
           alt="Logo de carga"
           className="h-20 w-auto md:h-32 lg:h-40 animate-pulse"
         />

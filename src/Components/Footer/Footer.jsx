@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import MotionIcon from "../Custom/MotionIcon";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { useLocation, useNavigate } from "react-router";
-import { navigationArray, Whatsapp_url, Instagram_url, bautiLink, ascensorLink  } from "../../Data/data";
+import { navigationArray, Whatsapp_url, Instagram_url, bautiLink  } from "../../Data/data";
 
 
 export const Footer = ({startTransition}) => {
@@ -56,18 +56,7 @@ export const Footer = ({startTransition}) => {
                 </span>
         )
     }
-    const AscensorSpan = () => {
-        return (
-            <span 
-                className='text-ascensor cursor-pointer uppercase '
-                onClick={() =>{
-                    window.open(ascensorLink)
-                }}
-                >
-                    el ascensor
-                </span>
-        )
-    }
+
     
     return (
         <footer className="flex flex-col h-auto mt-8 lg:h-[90vh] ">
@@ -130,14 +119,14 @@ export const Footer = ({startTransition}) => {
                     </div>
                     <div className="flex items-center justify-center mt-8 md:mt-0">
                         <img
-                            src="/Logos/hey-apple_black.png" className="h-12 w-auto sm:h-16 md:h-20 lg:h-28"
+                            src="/Logos/ser_apple_logo.png" className="h-12 w-auto sm:h-16 md:h-20 lg:h-28"
                         />
                     </div>
                 </div>
             </section>
             <section className='bg-text text-footer flex flex-col space-y-6 lg:space-y-0 lg:flex-row lg:px-8 justify-between items-center py-4 px-2 2xl:px-48 lg:h-[12vh] w-full'>
                 <div className="flex space-x-2 text-sm sm:text-base font-semibold">
-                  <span>© 2025 Hey Apple. Todos los derechos reservados</span>
+                  <span>© 2025 Ser Apple. Todos los derechos reservados</span>
                 </div>
 
                 <div className="flex flex-col items-center justify-center w-full sm:w-auto sm:flex-row space-y-2 sm:space-y-0 sm:space-x-8 text-sm sm:text-base font-semibold">
@@ -146,8 +135,7 @@ export const Footer = ({startTransition}) => {
                 </div>
 
                 <div className="flex space-x-1 items-start sm:justify-center text-sm sm:text-base font-semibold ">
-                  <span>Realizado por </span> <BautiSpan/> <span>para</span> <AscensorSpan/>
-                  
+                  <span>Realizado por </span> <BautiSpan/>
                 </div>
            </section>
         </footer>

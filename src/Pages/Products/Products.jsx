@@ -16,7 +16,7 @@ export const Products = () => {
                     className="h-1/2 w-full flex items-end mt-20"
             >
                 <h1 className="font-bold italic text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-7xl 2xl:text-8xl">
-                    Ecosistema Hey Apple.
+                    Ecosistema Ser Apple.
                 </h1>
             </motion.div>
             <motion.div 

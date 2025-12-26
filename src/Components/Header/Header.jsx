@@ -26,7 +26,7 @@ export const Header = ({isOpen, setIsOpen, startTransition}) => {
     return (
         <div className="h-[7vh] z-60 fixed top-0 w-full bg-background flex items-center justify-between px-10 ">
             <img 
-                src="/Logos/hey-apple_black.png"
+                src="/Logos/ser_apple_logo.png"
                 className="h-[5vh] w-auto cursor-pointer  hover:scale-110 transition-all duration-300 "
                 onClick={() => {
                     if (location.pathname === "/") return;
